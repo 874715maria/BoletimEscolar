@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">Boletim Escolar</string>
+    <string name="CadastrarUsuario">Cadastrar Usuário</string>
+    <string name="CadastrarMateria">Cadastrar Matéria</string>
+    <string name="CadastrarNota">Cadastrar Nota</string>
+    <string name="nome">Nome</string>
+    <string name="idade">Idade</string>
+    <string name="email">E-mail</string>
+    <string name="nomeEscola">Nome Escola</string>
+    <string name="salvar">Salvar</string>
+    <string name="cancelar">Cancelar</string>
+    <string name="apagar">Apagar</string>
+    <string name="Editar">Editar</string>
+    <string name="bemvindo">Seja Bem Vindo!</string>
+    <string name="lista">Listar!</string>
+
+
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_novo">NovoActivity</string>
+    <string name="title_activity_lista">ListaActivity</string>
+</resources>
