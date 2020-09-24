@@ -12,9 +12,8 @@
     <string name="apagar">Apagar</string>
     <string name="Editar">Editar</string>
     <string name="bemvindo">Seja Bem Vindo!</string>
+    <string name="materiasCadastradas"> Matérias salvas: </string>
     <string name="lista">Listar!</string>
-
-
     <string name="action_settings">Settings</string>
     <string name="title_activity_novo">NovoActivity</string>
     <string name="title_activity_lista">ListaActivity</string>
@@ -33,7 +32,10 @@
     <string name="textView_Registro">Registrar</string>
     <string name="textViewButton_Proximo"> Próximo </string>
     <string name="textViewButton_Salvar">Salvar</string>
+    <string name="textViewButton_Voltar">Voltar</string>
     <string name="inputText_Nome">Andrea da Silva</string>
+    <string name="textView_Notas">Notas</string>
+
 
 
 </resources>
