@@ -1,43 +1,45 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#0A5517"
     android:orientation="vertical">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="center"
         android:padding="24dp"
         android:text="@string/bemvindo"
-        android:layout_gravity="center"/>
+        android:textColor="#FFFFFF" />
 
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_gravity="center">
+        android:layout_gravity="center"
+        android:orientation="vertical">
 
         <Button
+            android:id="@+id/CadastrarUsuario"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/CadastrarUsuario"
             android:text="@string/CadastrarUsuario" />
 
         <Button
+            android:id="@+id/CadastrarMateria"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/CadastrarMateria"
             android:text="@string/CadastrarMateria" />
 
         <Button
+            android:id="@+id/CadastrarNota"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/CadastrarNota"
             android:text="@string/CadastrarNota" />
 
         <Button
+            android:id="@+id/buttonlista"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/buttonlista"
             android:text="@string/lista" />
     </LinearLayout>
 </LinearLayout>

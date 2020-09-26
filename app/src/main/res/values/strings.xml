@@ -11,8 +11,11 @@
     <string name="cancelar">Cancelar</string>
     <string name="apagar">Apagar</string>
     <string name="Editar">Editar</string>
-    <string name="bemvindo">Seja Bem Vindo!</string>
+    <string name="bemvindo">Seja Bem Vindo(a) ao Boletim</string>
     <string name="lista">Listar!</string>
+    <string name="nota">nota</string>
+    <string name="unidade">unidade</string>
+    <string name="periodo">periodo</string>
 
 
     <string name="action_settings">Settings</string>
@@ -35,5 +38,12 @@
     <string name="textViewButton_Salvar">Salvar</string>
     <string name="inputText_Nome">Andrea da Silva</string>
 
-
+    //itens para o menu
+    <string name="action_sair">Sair</string>
+    <string name="action_consulta">Consulta</string>
+    <string name="action_cadastro">Cadastro</string>
+    <string name="cadastro_boletim">Boletim</string>
+    <string name="cadastro_materia">Matéria</string>
+    <string name="consultar_boletim">Boletim</string>
+    <string name="consultar_materia">Matéria</string>
 </resources>

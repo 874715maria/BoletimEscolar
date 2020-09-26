@@ -8,8 +8,8 @@
     android:textAlignment="center">
 
     <TextView
-        android:layout_width="280dp"
-        android:layout_height="103dp"
+        android:layout_width="277dp"
+        android:layout_height="167dp"
         android:autoText="false"
         android:background="#00FFFFFF"
         android:text="@string/bemvindo"
