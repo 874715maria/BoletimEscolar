@@ -25,7 +25,7 @@
             <item android:id="@+id/consulta_materia"
                 android:title="@string/consultar_boletim"/>
             <item android:id="@+id/consulta_bolatim"
-                android:title="consultar_materia"/>
+                android:title="@string/consultar_materia"/>
         </menu>
     </item>
     <item

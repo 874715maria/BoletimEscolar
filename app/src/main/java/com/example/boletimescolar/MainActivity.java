@@ -81,19 +81,19 @@ public class MainActivity extends AppCompatActivity {
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.cadastro_materia) {
-            Toast.makeText(getApplicationContext(), "Testesando botão cadastro de matéira", Toast.LENGTH_LONG).show();
+            Toast.makeText(getApplicationContext(), "botão cadastro de matéira em execução", Toast.LENGTH_LONG).show();
             return true;
         }
         if (id == R.id.cadastro_bolatim) {
-            Toast.makeText(getApplicationContext(), "Testesando botão cadastro de boletim", Toast.LENGTH_LONG).show();
+            Toast.makeText(getApplicationContext(), "botão cadastro de boletim em execução", Toast.LENGTH_LONG).show();
             return true;
         }
         if (id == R.id.consulta_materia) {
-            Toast.makeText(getApplicationContext(), "Testesando botão consulta de matéria", Toast.LENGTH_LONG).show();
+            Toast.makeText(getApplicationContext(), "botão consulta de matéria em execução", Toast.LENGTH_LONG).show();
             return true;
         }
         if (id == R.id.consulta_bolatim) {
-            Toast.makeText(getApplicationContext(), "Testesando botão consulta de boletim", Toast.LENGTH_LONG).show();
+            Toast.makeText(getApplicationContext(), "botão consulta de boletim em execução", Toast.LENGTH_LONG).show();
             return true;
         }
         if (id == R.id.action_sair) {
