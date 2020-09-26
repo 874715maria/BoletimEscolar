@@ -80,7 +80,25 @@ public class MainActivity extends AppCompatActivity {
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
+        if (id == R.id.cadastro_materia) {
+            Toast.makeText(getApplicationContext(), "botão cadastro de matéira em execução", Toast.LENGTH_LONG).show();
+            return true;
+        }
+        if (id == R.id.cadastro_bolatim) {
+            Toast.makeText(getApplicationContext(), "botão cadastro de boletim em execução", Toast.LENGTH_LONG).show();
+            return true;
+        }
+        if (id == R.id.consulta_materia) {
+            Toast.makeText(getApplicationContext(), "botão consulta de matéria em execução", Toast.LENGTH_LONG).show();
+            return true;
+        }
+        if (id == R.id.consulta_bolatim) {
+            Toast.makeText(getApplicationContext(), "botão consulta de boletim em execução", Toast.LENGTH_LONG).show();
+            return true;
+        }
+        if (id == R.id.action_sair) {
+            Toast.makeText(getApplicationContext(), "Sair Clicado", Toast.LENGTH_LONG).show();
+            finish();
             return true;
         }
 

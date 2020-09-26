@@ -2,9 +2,36 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     tools:context="exemplo.webmobile.android.conexaoexterna.ListaActivity">
+
     <item
-        android:id="@+id/action_settings"
-        android:orderInCategory="100"
-        android:title="@string/action_settings"
+        android:id="@+id/action_cadastro"
+        android:orderInCategory="101"
+        android:title="@string/action_cadastro"
+        app:showAsAction="never">
+        <menu>
+            <item android:id="@+id/cadastro_materia"
+                android:title="@string/cadastro_materia"/>
+            <item android:id="@+id/cadastro_bolatim"
+                android:title="@string/cadastro_boletim"/>
+            </menu>
+        </item>
+
+    <item
+        android:id="@+id/action_consulta"
+        android:orderInCategory="102"
+        android:title="@string/action_consulta"
+        app:showAsAction="never" >
+        <menu>
+            <item android:id="@+id/consulta_materia"
+                android:title="@string/consultar_boletim"/>
+            <item android:id="@+id/consulta_bolatim"
+                android:title="@string/consultar_materia"/>
+        </menu>
+    </item>
+    <item
+        android:id="@+id/action_sair"
+        android:orderInCategory="104"
+        android:title="@string/action_sair"
         app:showAsAction="never" />
+
 </menu>

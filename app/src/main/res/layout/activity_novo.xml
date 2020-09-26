@@ -1,50 +1,62 @@
-<LinearLayout
-    android:orientation="vertical"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#0A5517"
     android:gravity="center"
-    xmlns:android="http://schemas.android.com/apk/res/android">
+    android:orientation="vertical">
 
     <EditText
         android:id="@+id/editTextNome"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:background="#0A5517"
         android:ems="10"
-        android:text="@string/nome" />
+        android:shadowColor="#FFFFFF"
+        android:text="@string/nome"
+        android:textColor="#FFFFFF" />
 
     <EditText
         android:id="@+id/editTextIdade"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:background="#0A5517"
         android:ems="10"
-        android:text="@string/idade" />
+        android:shadowColor="#FFFFFF"
+        android:text="@string/idade"
+        android:textColor="#FFFFFF" />
 
     <EditText
         android:id="@+id/editTextEmail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:background="#0A5517"
         android:ems="10"
-        android:text="@string/email" />
+        android:shadowColor="#FFFFFF"
+        android:text="@string/email"
+        android:textColor="#FFFFFF" />
 
     <EditText
         android:id="@+id/editTextNomeEscola"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:background="#0A5517"
         android:ems="10"
-        android:text="@string/nomeEscola" />
+        android:shadowColor="#FFFFFF"
+        android:text="@string/nomeEscola"
+        android:textColor="#FFFFFF" />
 
     <Button
         android:id="@+id/buttonSalvar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/salvar"
-        android:onClick="salvar"/>
+        android:onClick="salvar"
+        android:text="@string/salvar" />
 
     <Button
         android:id="@+id/buttonCancelar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/cancelar"
-        android:onClick="cancelar"/>
+        android:onClick="cancelar"
+        android:text="@string/cancelar" />
 
 </LinearLayout>

@@ -11,9 +11,7 @@
     <string name="cancelar">Cancelar</string>
     <string name="apagar">Apagar</string>
     <string name="Editar">Editar</string>
-    <string name="bemvindo">Seja Bem Vindo!</string>
-    <string name="materiasCadastradas"> Matérias salvas: </string>
-    <string name="lista">Listar!</string>
+
     <string name="action_settings">Settings</string>
     <string name="title_activity_novo">NovoActivity</string>
     <string name="title_activity_lista">ListaActivity</string>
@@ -37,5 +35,12 @@
     <string name="textView_Notas">Notas</string>
 
 
-
+    //itens para o menu
+    <string name="action_sair">Sair</string>
+    <string name="action_consulta">Consulta</string>
+    <string name="action_cadastro">Cadastro</string>
+    <string name="cadastro_boletim">Boletim</string>
+    <string name="cadastro_materia">Matéria</string>
+    <string name="consultar_boletim">Boletim</string>
+    <string name="consultar_materia">Matéria</string>
 </resources>
