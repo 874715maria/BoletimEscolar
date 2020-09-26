@@ -1,0 +1,10 @@
+<application>
+  <component name="VisualizationTool">
+    <option name="state">
+      <GlobalState>
+        <option name="configurationSetName" value="CUSTOM" />
+        <option name="showDecoration" value="true" />
+      </GlobalState>
+    </option>
+  </component>
+</application>
