@@ -8,11 +8,12 @@
     android:textAlignment="center">
 
     <TextView
-        android:layout_width="277dp"
-        android:layout_height="167dp"
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:autoText="false"
         android:background="#00FFFFFF"
-        android:text="@string/bemvindo"
+        android:text="@string/materiasCadastradas"
         android:textAlignment="center"
         android:textColor="#FFFFFF"
         android:textSize="36sp"
@@ -20,27 +21,22 @@
         android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:visibility="visible" />
+        app:layout_constraintVertical_bias="0.057" />
 
     <Button
-        android:id="@+id/entrar"
-        android:layout_width="145dp"
-        android:layout_height="54dp"
-        android:background="#FFFFFF"
-        android:text="@string/textViewButton_Entrar"
-        tools:layout_editor_absoluteX="46dp"
-        tools:layout_editor_absoluteY="610dp" />
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="259dp"
+        android:text="@string/textViewButton_Voltar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.86"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintVertical_bias="0.65" />
 
-    <Button
-        android:id="@+id/registrar"
-        android:layout_width="145dp"
-        android:layout_height="54dp"
-        android:background="#000000"
-        android:text="@string/textView_Registro"
-        android:textColor="#FFFFFF"
-        tools:layout_editor_absoluteX="223dp"
-        tools:layout_editor_absoluteY="610dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
