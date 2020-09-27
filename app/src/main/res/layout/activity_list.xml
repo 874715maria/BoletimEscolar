@@ -5,9 +5,10 @@
     android:orientation="vertical">
 
     <ListView
+        android:background="#0A5517"
         android:id="@+id/listViewAluno"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
-        android:background="#0A5517"
+
         android:cacheColorHint="#FFFFFF" />
 </LinearLayout>

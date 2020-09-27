@@ -20,8 +20,10 @@
         android:contentDescription="@string/imageButton_Voltar"
         app:layout_constraintBottom_toTopOf="@+id/textView_Registro"
         app:layout_constraintEnd_toEndOf="@+id/textView_Registro"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="@+id/textView_Registro"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
         app:srcCompat="?attr/actionModeCloseDrawable"
         tools:visibility="visible" />
 
@@ -37,53 +39,48 @@
         android:textSize="24sp"
         app:layout_constraintBottom_toTopOf="@+id/inputText_email"
         app:layout_constraintEnd_toEndOf="@+id/inputText_email"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.394"
         app:layout_constraintStart_toStartOf="@+id/inputText_email"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.79" />
+        app:layout_constraintVertical_bias="0.862" />
 
     <EditText
         android:id="@+id/inputText_email"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_width="370dp"
+        android:layout_height="40dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="96dp"
-        android:layout_marginEnd="24dp"
+        android:layout_marginTop="112dp"
+        android:background="#ffffff"
         android:hint="@string/prompt_email"
         android:importantForAutofill="no"
         android:inputType="textEmailAddress"
         android:selectAllOnFocus="true"
-        android:textColor="#FFFFFF"
-        android:textColorHighlight="#FFFFFF"
-        android:textColorHint="#FDFDFD"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/inputText_password"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="24dp"
+        android:layout_width="370dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="16dp"
+        android:background="#ffffff"
         android:hint="@string/prompt_password"
         android:imeActionLabel="@string/action_sign_in_short"
         android:imeOptions="actionDone"
         android:importantForAutofill="no"
         android:inputType="textPassword"
         android:selectAllOnFocus="true"
-        android:textColor="#FFFFFF"
-        android:textColorHighlight="#F6F6F6"
-        android:textColorHint="#FFFFFF"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/inputText_email" />
 
     <Button
         android:id="@+id/button_Salvar"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_width="321dp"
+        android:layout_height="47dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="24dp"
@@ -91,9 +88,10 @@
         android:enabled="false"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/inputText_password"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.031" />
 
     <TextView
         android:id="@+id/textViewButton_Salvar"
