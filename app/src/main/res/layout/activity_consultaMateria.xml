@@ -9,11 +9,11 @@
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:autoText="false"
         android:background="#00FFFFFF"
-        android:text="@string/materiasCadastradas"
+        android:text="Materias Cadastradas"
         android:textAlignment="center"
         android:textColor="#FFFFFF"
         android:textSize="36sp"

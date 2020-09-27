@@ -8,39 +8,44 @@
 
     <EditText
         android:id="@+id/editTextNome4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="370dp"
+        android:layout_height="40dp"
         android:background="#ffffff"
+
         android:ems="10"
         android:shadowColor="#FFFFFF"
-        android:text="@string/nota"
+        android:text="Nota"
         android:textColor="#000000"
-        tools:layout_editor_absoluteX="99dp"
-        tools:layout_editor_absoluteY="284dp" />
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="20dp"
+        tools:layout_editor_absoluteY="279dp" />
 
     <EditText
         android:id="@+id/editTextNome3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="370dp"
+        android:layout_height="40dp"
         android:background="#ffffff"
+
         android:ems="10"
         android:shadowColor="#FFFFFF"
-        android:text="@string/unidade"
+        android:text="unidade"
         android:textColor="#000000"
-        tools:layout_editor_absoluteX="99dp"
-        tools:layout_editor_absoluteY="218dp" />
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="20dp"
+        tools:layout_editor_absoluteY="212dp" />
 
     <EditText
         android:id="@+id/editTextNome2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="370dp"
+        android:layout_height="40dp"
         android:background="#ffffff"
         android:ems="10"
         android:shadowColor="#FFFFFF"
-        android:text="@string/periodo"
+        android:text="periodo"
         android:textColor="#000000"
-        tools:layout_editor_absoluteX="99dp"
-        tools:layout_editor_absoluteY="159dp" />
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="20dp"
+        tools:layout_editor_absoluteY="145dp" />
 
     <TextView
         android:id="@+id/textView2"
@@ -51,7 +56,8 @@
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="78dp" />
+        tools:layout_editor_absoluteY="78dp"
+        tools:ignore="MissingConstraints" />
 
     <Button
         android:id="@+id/button3"
@@ -59,7 +65,8 @@
         android:layout_height="wrap_content"
         android:text="@string/cancelar"
         tools:layout_editor_absoluteX="99dp"
-        tools:layout_editor_absoluteY="374dp" />
+        tools:layout_editor_absoluteY="374dp"
+        tools:ignore="MissingConstraints" />
 
     <Button
         android:id="@+id/button4"
@@ -67,6 +74,7 @@
         android:layout_height="wrap_content"
         android:text="@string/salvar"
         tools:layout_editor_absoluteX="224dp"
-        tools:layout_editor_absoluteY="374dp" />
+        tools:layout_editor_absoluteY="374dp"
+        tools:ignore="MissingConstraints" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
