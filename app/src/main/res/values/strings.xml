@@ -33,6 +33,7 @@
     <string name="inputText_Nome">Andrea da Silva</string>
     <string name="textView_Notas">Notas</string>
 
+    <string name="welcome">Welcome</string>
 
     //itens para o menu
     <string name="action_sair">Sair</string>

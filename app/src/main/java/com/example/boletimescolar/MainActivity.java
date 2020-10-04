@@ -14,54 +14,60 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
 
-    private Aluno aluno;
+    //private Aluno aluno;
 
-    private TextView TextViewNome;
-    private TextView TextViewIdade;
-    private TextView TextViewEmail;
-    private TextView TextViewNomeEscola;
+    //private TextView TextViewNome;
+    //private TextView TextViewIdade;
+   // private TextView TextViewEmail;
+    //private TextView TextViewNomeEscola;
 
-    private ListView listViewAluno;
+    //private ListView listViewAluno;
 
     private Button CadastrarUsuario;
     private Button CadastrarMateria;
     private Button CadastrarNota;
 
-    private Button Salvar;
-    private Button Cancelar;
+    //private Button Salvar;
+    //private Button Cancelar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        setContentView(R.layout.activity_novo);
-        setContentView(R.layout.activity_list);
+       // setContentView(R.layout.activity_usuario);
+        //setContentView(R.layout.activity_list);
 
-        this.listViewAluno = (ListView) findViewById(R.id.listViewAluno);
-        this.listViewAluno.setAdapter(new AlunoAdapter(this,new Aluno().getLista()));
+        //this.listViewAluno = (ListView) findViewById(R.id.listViewAluno);
+        //this.listViewAluno.setAdapter(new AlunoAdapter(this,new Aluno().getLista()));
 
-        this.aluno = new Aluno();
+        //this.aluno = new Aluno();
 
-        this.TextViewNome = (TextView) findViewById(R.id.textViewNome);
-        this.TextViewIdade = (TextView) findViewById(R.id.textViewIdade);
-        this.TextViewEmail = (TextView) findViewById(R.id.textViewEmail);
-        this.TextViewNomeEscola = (TextView) findViewById(R.id.textViewNomeEscola);
+       // this.TextViewNome = (TextView) findViewById(R.id.textViewNome);
+        //this.TextViewIdade = (TextView) findViewById(R.id.textViewIdade);
+       // this.TextViewEmail = (TextView) findViewById(R.id.textViewEmail);
+       // this.TextViewNomeEscola = (TextView) findViewById(R.id.textViewNomeEscola);
 
-        Intent intent = getIntent();
-        if (intent != null){
-            Bundle bundle = intent.getExtras();
-            if (bundle != null){
-                this.aluno.setId(bundle.getInt("id"));
-                this.TextViewNome.setText(bundle.getString("nome"));
-                this.TextViewIdade.setText(bundle.getString("idade"));
-                this.TextViewEmail.setText(bundle.getString("email"));
-                this.TextViewNomeEscola.setText(bundle.getString("nomeEscola"));
-            }
-        }
-
+       // Intent intent = getIntent();
+       // if (intent != null){
+           // Bundle bundle = intent.getExtras();
+            //if (bundle != null){
+           //     this.aluno.setId(bundle.getInt("id"));
+            //    this.TextViewNome.setText(bundle.getString("nome"));
+             //   this.TextViewIdade.setText(bundle.getString("idade"));
+              //  this.TextViewEmail.setText(bundle.getString("email"));
+              //  this.TextViewNomeEscola.setText(bundle.getString("nomeEscola"));
+           // }
+       // }
         CadastrarUsuario = (Button) findViewById(R.id.CadastrarUsuario);
+        CadastrarUsuario.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), Aluno.class);
+                startActivity(intent);
+            }
+        });
         CadastrarMateria = (Button) findViewById(R.id.CadastrarMateria);
-        CadastrarNota = (Button) findViewById(R.id.CadastrarNota);
+        CadastrarNota = (Button) findViewById(R.id.CadastrarNota);//
 
     }
 
@@ -104,30 +110,30 @@ public class MainActivity extends AppCompatActivity {
 
         return super.onOptionsItemSelected(item);
     }
-    public void salvar (View view){
-        this.aluno.setNome(this.TextViewNome.getText().toString());
-        this.aluno.setIdade(this.TextViewIdade.getText().toString());
-        this.aluno.setEmail(this.TextViewEmail.getText().toString());
-        this.aluno.setNomeEscola(this.TextViewNomeEscola.getText().toString());
-        this.aluno.salvar();
+    //public void salvar (View view){
+       // this.aluno.setNome(this.TextViewNome.getText().toString());
+       // this.aluno.setIdade(this.TextViewIdade.getText().toString());
+      //  this.aluno.setEmail(this.TextViewEmail.getText().toString());
+       // this.aluno.setNomeEscola(this.TextViewNomeEscola.getText().toString());
+      //  this.aluno.salvar();
 
-        Toast.makeText(this,this.aluno.getMensagem(),Toast.LENGTH_LONG).show();
-        if (aluno.is_status())
-            finish();
-    }
+       // Toast.makeText(this,this.aluno.getMensagem(),Toast.LENGTH_LONG).show();
+       // if (aluno.is_status())
+         //   finish();
+   // }
 
-    public void cancelar (View view){
-        finish();
-    }
+    //public void cancelar (View view){
+        //finish();
+    //}
 
-    public void abreCadastrarAluno (View view){
-        Intent intent = new Intent(this,MainActivity.class);
-        startActivity(intent);
-    }
+    //public void abreCadastrarAluno (View view){
+         //Intent intent = new Intent(this,MainActivity.class);
+        //startActivity(intent);
+   // }
 
-    public void abreLista (View view){
-        Intent intent = new Intent(this,MainActivity.class);
-        startActivity(intent);
-    }
+   // public void abreLista (View view){
+     //   Intent intent = new Intent(this,MainActivity.class);
+      //  startActivity(intent);
+  //  }
 }
 

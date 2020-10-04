@@ -35,11 +35,5 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/CadastrarNota" />
-
-        <Button
-            android:id="@+id/buttonlista"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/lista" />
     </LinearLayout>
 </LinearLayout>
