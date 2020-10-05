@@ -1,60 +1,42 @@
-<?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#0A5517"
-    android:textAlignment="center">
+    android:orientation="vertical">
 
     <TextView
-        android:id="@+id/textView_BemVindo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="#00FFFFFF"
+        android:layout_gravity="center"
+        android:padding="24dp"
         android:text="@string/bemvindo"
-        android:textAlignment="center"
-        android:textColor="#FFFFFF"
-        android:textSize="36sp"
-        android:typeface="normal"
-        android:visibility="visible"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:visibility="visible" />
+        android:textColor="#FFFFFF" />
 
-    <Button
-        android:id="@+id/button_entrar"
-        android:layout_width="167dp"
-        android:layout_height="52dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="200dp"
-        android:layout_marginEnd="89dp"
-        android:layout_marginBottom="200dp"
-        android:background="#FFFFFF"
-        android:text="@string/textViewButton_Entrar"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/button_registrar"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView_BemVindo" />
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="vertical">
 
-    <Button
-        android:id="@+id/button_registrar"
-        android:layout_width="167dp"
-        android:layout_height="52dp"
-        android:layout_marginTop="200dp"
-        android:layout_marginEnd="32dp"
-        android:layout_marginBottom="200dp"
-        android:background="#000000"
-        android:text="@string/textView_Registro"
-        android:textColor="#FFFFFF"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView_BemVindo" />
+        <Button
+            android:id="@+id/CadastrarUsuario"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/CadastrarUsuario"
+            android:onClick="abreCadastrarUsuario"/>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <Button
+            android:id="@+id/CadastrarMateria"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/CadastrarMateria"
+            android:onClick="abreCadastrarMateria"/>
+
+        <Button
+            android:id="@+id/CadastrarNota"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/CadastrarNota"
+            android:onClick="abreCadastrarNota"/>
+    </LinearLayout>
+</LinearLayout>
