@@ -6,8 +6,21 @@
     android:layout_height="match_parent"
     android:background="#0A5517">
 
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Preencha os campos"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="78dp"
+        tools:ignore="MissingConstraints" />
+
+
     <EditText
-        android:id="@+id/editTextNome4"
+        android:id="@+id/editTextNota"
         android:layout_width="370dp"
         android:layout_height="40dp"
         android:background="#ffffff"
@@ -21,7 +34,7 @@
         tools:layout_editor_absoluteY="279dp" />
 
     <EditText
-        android:id="@+id/editTextNome3"
+        android:id="@+id/editTextUnidade"
         android:layout_width="370dp"
         android:layout_height="40dp"
         android:background="#ffffff"
@@ -35,7 +48,7 @@
         tools:layout_editor_absoluteY="212dp" />
 
     <EditText
-        android:id="@+id/editTextNome2"
+        android:id="@+id/editTextPeriodo"
         android:layout_width="370dp"
         android:layout_height="40dp"
         android:background="#ffffff"
@@ -47,23 +60,13 @@
         tools:layout_editor_absoluteX="20dp"
         tools:layout_editor_absoluteY="145dp" />
 
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Preencha os campos"
-        android:textColor="#FFFFFF"
-        android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="78dp"
-        tools:ignore="MissingConstraints" />
 
     <Button
         android:id="@+id/button3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/cancelar"
+        android:onClick="cancelar"
         tools:layout_editor_absoluteX="99dp"
         tools:layout_editor_absoluteY="374dp"
         tools:ignore="MissingConstraints" />
@@ -73,6 +76,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/salvar"
+        android:onClick="salvar"
         tools:layout_editor_absoluteX="224dp"
         tools:layout_editor_absoluteY="374dp"
         tools:ignore="MissingConstraints" />

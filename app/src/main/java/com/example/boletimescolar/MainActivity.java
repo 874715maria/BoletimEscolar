@@ -5,9 +5,6 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Button;
-import android.widget.ListView;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -25,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_entrada);
 
         //this.listViewAluno = (ListView) findViewById(R.id.listViewAluno);
         //this.listViewAluno.setAdapter(new AlunoAdapter(this,new Aluno().getLista()));
@@ -79,7 +76,7 @@ public class MainActivity extends AppCompatActivity {
 
 
       public void abreCadastrarUsuario (View view){
-            Intent intent = new Intent(this,SegundaActivity2.class);
+            Intent intent = new Intent(this, UsuarioActivity.class);
             startActivity(intent);
      }
 
@@ -88,7 +85,7 @@ public class MainActivity extends AppCompatActivity {
           startActivity(intent);
       }
     public void abreCadastrarNota (View view){
-        Intent intent = new Intent(this,SegundaActivity2.class);
+        Intent intent = new Intent(this,NotaActivity.class);
         startActivity(intent);
     }
 }

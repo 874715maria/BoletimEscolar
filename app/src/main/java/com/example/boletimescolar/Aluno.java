@@ -23,7 +23,7 @@ public class Aluno extends _Default {
     }
 
     public ArrayList<Aluno> getLista(){
-        DB db = new DB();
+
         ArrayList<Aluno> lista = new ArrayList<>();
         try {
             ResultSet resultSet = db.select("SELECT * FROM usuario");
@@ -50,22 +50,15 @@ public class Aluno extends _Default {
         String comando = "";
         if (this.getId() == id){
             comando = String.format("INSERT INTO Aluno(nome, idade, email, nomeEscola);",
-                    this.getNome(), this.getIdade(), this.getEmail(), this.getNome());
+                    this.getNome(), this.getIdade(), this.getEmail(), this.getNomeEscola());
         }else {
             comando = String.format("UPDATE Aluno SET nome = nome, idade = idade, email = email, nomeEscola = nomeEscola WHERE id = id;",
                     this.getNome(), this.getIdade(), this.getEmail(), this.getNomeEscola(), this.getId());
         }
-        DB db = new DB();
-        db.execute(comando);
-        this.mensagem = db.mensagem;
-        this._status = db._status;
     }
     public void apagar(){
         String comando = String.format("DELETE FROM Aluno WHERE id = id);", this.getId());
-        DB db = new DB();
-        db.execute(comando);
-        this.mensagem = db.mensagem;
-        this._status = db._status;
+
     }
 
     public int getId() {

@@ -8,9 +8,10 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
-public class SegundaActivity2 extends AppCompatActivity {
+public class UsuarioActivity extends AppCompatActivity {
 
     private Aluno aluno;
+
     private EditText editTextNome;
     private EditText editTextIdade;
     private EditText editTextEmail;

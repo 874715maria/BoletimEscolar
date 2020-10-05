@@ -2,9 +2,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.boletimescolar">
 
-    <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.INTERNET" />
-
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -13,10 +10,14 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
+            android:name=".NotaActivity"
+            android:label="@string/title_activity_nota"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity
             android:name=".MateriaActivity"
             android:label="@string/title_activity_materia"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
-        <activity android:name=".SegundaActivity2" />
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".UsuarioActivity" />
         <activity android:name=".SplashScreen" />
         <activity
             android:name=".ui.login.LoginActivity"
