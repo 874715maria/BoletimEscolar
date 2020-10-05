@@ -8,7 +8,7 @@ public class DB extends _Default implements Runnable {
 
     private Connection conn;
     private String host = "10.80.107.16";
-    private String db = "Boletim Escolar";
+    private String db = "BoletimEscolar";
     private int port = 5432;
     private String user = "postgres";
     private String pass = "123";

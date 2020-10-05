@@ -22,18 +22,21 @@
             android:id="@+id/CadastrarUsuario"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/CadastrarUsuario" />
+            android:text="@string/CadastrarUsuario"
+            android:onClick="abreCadastrarUsuario"/>
 
         <Button
             android:id="@+id/CadastrarMateria"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/CadastrarMateria" />
+            android:text="@string/CadastrarMateria"
+            android:onClick="abreCadastrarMateria"/>
 
         <Button
             android:id="@+id/CadastrarNota"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/CadastrarNota" />
+            android:text="@string/CadastrarNota"
+            android:onClick="abreCadastrarNota"/>
     </LinearLayout>
 </LinearLayout>
