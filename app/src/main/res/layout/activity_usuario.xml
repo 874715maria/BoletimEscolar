@@ -7,43 +7,57 @@
 
     <EditText
         android:id="@+id/editTextNome"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="#0A5517"
+        android:layout_width="370dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:background="#ffffff"
+        android:clickable="false"
         android:ems="10"
-        android:shadowColor="#FFFFFF"
-        android:text="@string/nome"
-        android:textColor="#FFFFFF" />
+        android:shadowColor="#000000"
+        android:text="@string/nome" />
 
     <EditText
         android:id="@+id/editTextIdade"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="#0A5517"
+        android:layout_width="370dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:background="#ffffff"
         android:ems="10"
         android:shadowColor="#FFFFFF"
         android:text="@string/idade"
-        android:textColor="#FFFFFF" />
+        android:textAllCaps="false"
+        android:textColor="#000000" />
 
     <EditText
         android:id="@+id/editTextEmail"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="#0A5517"
+        android:layout_width="370dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:background="#ffffff"
+
         android:ems="10"
         android:shadowColor="#FFFFFF"
         android:text="@string/email"
-        android:textColor="#FFFFFF" />
+        android:textColor="#000000" />
 
     <EditText
         android:id="@+id/editTextNomeEscola"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="#0A5517"
+        android:layout_width="370dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:background="#ffffff"
         android:ems="10"
         android:shadowColor="#FFFFFF"
         android:text="@string/nomeEscola"
-        android:textColor="#FFFFFF" />
+        android:textColor="#000000" />
 
     <Button
         android:id="@+id/buttonSalvar"
