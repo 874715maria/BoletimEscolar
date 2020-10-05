@@ -35,16 +35,9 @@ public class Materia extends _Default{
             comando = String.format("UPDATE Materia SET nome = nome, WHERE id = id;",
                     this.getNome(), this.getId());
         }
-        DB db = new DB();
-        db.execute(comando);
-        this.mensagem = db.mensagem;
-        this._status = db._status;
     }
     public void apagar(){
         String comando = String.format("DELETE FROM Materia WHERE id = id);", this.getId());
-        DB db = new DB();
-        db.execute(comando);
-        this.mensagem = db.mensagem;
-        this._status = db._status;
+
     }
 }

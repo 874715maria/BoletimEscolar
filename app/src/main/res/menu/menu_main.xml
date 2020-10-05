@@ -10,9 +10,11 @@
         app:showAsAction="never">
         <menu>
             <item android:id="@+id/cadastro_materia"
-                android:title="@string/cadastro_materia"/>
+                android:title="@string/cadastro_materia"
+                android:onClick="abreCadastrarMateria"/>
             <item android:id="@+id/cadastro_bolatim"
-                android:title="@string/cadastro_boletim"/>
+                android:title="@string/cadastro_boletim"
+                android:onClick="abreCadastrarNota"/>
             </menu>
         </item>
 

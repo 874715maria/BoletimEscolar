@@ -27,7 +27,7 @@ public class BancoDados extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase db) {
 
-        String QUERY_COLUNA = "CREATE TABLE" + Tabela_Aluno + "("
+        //String QUERY_COLUNA = "CREATE TABLE" + Tabela_Aluno + "("
     }
 
     @Override

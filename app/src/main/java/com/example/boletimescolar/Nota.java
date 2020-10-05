@@ -35,17 +35,11 @@ public class Nota extends _Default{
             comando = String.format("UPDATE Nota SET periodo = periodo, unidade = unidade, nota = nota WHERE id = id;",
                     this.getPeriodo(), this.getUnidade(), this.getNota(), this.getId());
         }
-        DB db = new DB();
-        db.execute(comando);
-        this.mensagem = db.mensagem;
-        this._status = db._status;
+
     }
     public void apagar(){
         String comando = String.format("DELETE FROM Nota WHERE id = id);", this.getId());
-        DB db = new DB();
-        db.execute(comando);
-        this.mensagem = db.mensagem;
-        this._status = db._status;
+
     }
 
     public void setPeriodo(String periodo) {

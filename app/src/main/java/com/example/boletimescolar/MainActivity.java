@@ -9,8 +9,10 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import static com.example.boletimescolar.R.menu.menu_main;
+
 public class MainActivity extends AppCompatActivity {
-    //private ListView listViewAluno;
+
 
    // private Button CadastrarUsuario;
    // private Button CadastrarMateria;
@@ -22,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_inicio);
 
         //this.listViewAluno = (ListView) findViewById(R.id.listViewAluno);
         //this.listViewAluno.setAdapter(new AlunoAdapter(this,new Aluno().getLista()));
@@ -37,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_main, menu);
+        getMenuInflater().inflate(menu_main, menu);
         return true;
     }
 
