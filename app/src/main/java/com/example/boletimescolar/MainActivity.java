@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_entrada);
+        setContentView(R.layout.activity_main);
 
         //this.listViewAluno = (ListView) findViewById(R.id.listViewAluno);
         //this.listViewAluno.setAdapter(new AlunoAdapter(this,new Aluno().getLista()));

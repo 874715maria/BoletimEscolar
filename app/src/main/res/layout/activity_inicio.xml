@@ -8,9 +8,9 @@
     android:textAlignment="center">
 
     <TextView
-        android:layout_width="277dp"
-        android:layout_height="167dp"
-        android:autoText="false"
+        android:id="@+id/textView_BemVindo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:background="#00FFFFFF"
         android:text="@string/bemvindo"
         android:textAlignment="center"
@@ -26,21 +26,35 @@
         tools:visibility="visible" />
 
     <Button
-        android:id="@+id/entrar"
-        android:layout_width="145dp"
-        android:layout_height="54dp"
+        android:id="@+id/button_entrar"
+        android:layout_width="167dp"
+        android:layout_height="52dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="200dp"
+        android:layout_marginEnd="89dp"
+        android:layout_marginBottom="200dp"
         android:background="#FFFFFF"
         android:text="@string/textViewButton_Entrar"
-        tools:layout_editor_absoluteX="46dp"
-        tools:layout_editor_absoluteY="610dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/button_registrar"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_BemVindo" />
 
     <Button
-        android:id="@+id/registrar"
-        android:layout_width="145dp"
-        android:layout_height="54dp"
+        android:id="@+id/button_registrar"
+        android:layout_width="167dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="200dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="200dp"
         android:background="#000000"
         android:text="@string/textView_Registro"
         android:textColor="#FFFFFF"
-        tools:layout_editor_absoluteX="223dp"
-        tools:layout_editor_absoluteY="610dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_BemVindo" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
