@@ -1,5 +1,6 @@
 package com.example.boletimescolar;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 
@@ -13,15 +14,20 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import static com.example.boletimescolar.R.menu.menu_main;
+
 public class MateriaActivity extends AppCompatActivity {
 
     private Materia materia;
     private EditText editTextTextPersonName;
 
+
+    @SuppressLint("ResourceType")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cadastro_materia);
+        setContentView(menu_main);
 
         this.materia = new Materia();
         this.editTextTextPersonName = (EditText) findViewById(R.id.editTextTextPersonName);

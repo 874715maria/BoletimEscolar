@@ -22,29 +22,29 @@ public class Aluno extends _Default {
         this.nomeEscola = nomeEscola;
     }
 
-    public ArrayList<Aluno> getLista(){
+   // public ArrayList<Aluno> getLista(){
 
-        ArrayList<Aluno> lista = new ArrayList<>();
-        try {
-            ResultSet resultSet = db.select("SELECT * FROM usuario");
-            if (resultSet != null){
-                while (resultSet.next()){
-                    Aluno obj = new Aluno();
-                    obj.setId(resultSet.getInt("id"));
-                    obj.setNome(resultSet.getString("nome"));
-                    obj.setIdade(resultSet.getString("idade"));
-                    obj.setEmail(resultSet.getString("email"));
-                    obj.setNomeEscola(resultSet.getString("nomeEscola"));
-                    lista.add(obj);
-                    obj = null;
-                }
-            }
-        }catch (Exception ex){
-            this.mensagem = ex.getMessage();
-            this._status = false;
-        }
-        return lista;
-    }
+       // ArrayList<Aluno> lista = new ArrayList<>();
+       // try {
+         //   ResultSet resultSet = select("SELECT * FROM usuario");
+          //  if (resultSet != null){
+             //   while (resultSet.next()){
+               //     Aluno obj = new Aluno();
+                //    obj.setId(resultSet.getInt("id"));
+               //     obj.setNome(resultSet.getString("nome"));
+                 //   obj.setIdade(resultSet.getString("idade"));
+                  //  obj.setEmail(resultSet.getString("email"));
+                  //  obj.setNomeEscola(resultSet.getString("nomeEscola"));
+                  //  lista.add(obj);
+                  //  obj = null;
+               // }
+            //}
+      //  }catch (Exception ex){
+          //  this.mensagem = ex.getMessage();
+        //    this._status = false;
+      //  }
+      //  return lista;
+   // }
 
     public void salvar(){
         String comando = "";
