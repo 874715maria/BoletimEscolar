@@ -13,9 +13,9 @@ import com.google.android.material.textfield.TextInputEditText;
 
 public class LoginActivity extends AppCompatActivity {
 
-    ImageButton imageButton_voltarMainActivity;
-    Button button_entrarLogin;
-    TextInputEditText textInputEditText_email, textInputEditText_senha;
+    private ImageButton imageButton_voltarMainActivity;
+    private Button button_entrarLogin;
+    private TextInputEditText textInputEditText_email, textInputEditText_senha;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,7 +30,6 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 voltarMainActivity();
-
             }
         });
 
@@ -44,13 +43,13 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     //Metodo para fazer o login e ir para a tela início do app (quando logado)
-    private void efetuarLogin() {
-        Intent intent = new Intent(this, MainActivity.class);
+    public void efetuarLogin() {
+        Intent intent = new Intent(this, InicioActivity.class);
         startActivity(intent);
     }
 
     //Metodo para voltar para a tela inicial do app (não logado/tela de cadastro e login)
-    private void voltarMainActivity() {
+    public void voltarMainActivity() {
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
     }

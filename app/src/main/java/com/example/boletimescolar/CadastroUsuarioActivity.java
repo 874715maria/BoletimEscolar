@@ -10,9 +10,9 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class CadastroUsuarioActivity extends AppCompatActivity {
 
-    ImageButton imageButton_voltarMainActivity;
-    Button button_salvarCadastro;
-//    TextInputEditText textInputEditText_nome, textInputEditText_email, textInputEditText_senha;
+    private ImageButton imageButton_voltarMainActivity;
+    private Button button_salvarCadastro;
+//    private TextInputEditText textInputEditText_nome, textInputEditText_email, textInputEditText_senha;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,13 +40,13 @@ public class CadastroUsuarioActivity extends AppCompatActivity {
     }
 
     //Metodo para voltar para a tela inicial do app (não logado/tela de cadastro e login)
-    private void voltarMainActivity() {
+    public void voltarMainActivity() {
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
     }
 
     //Metodo para enviar os dados do cadastro para o BD e ir para a tela início do app (não logado/tela de cadastro e login)
-    private void salvarCadastro() {
+    public void salvarCadastro() {
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
     }

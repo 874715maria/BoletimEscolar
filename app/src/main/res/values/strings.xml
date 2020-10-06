@@ -55,4 +55,7 @@
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
     <string name="title_activity_nota">NotaActivity</string>
     <string name="textView_Cadastro">Cadastro</string>
+    <string name="textViewButton_Salvar2">Salvar 2</string>
+    <string name="TesteActivity">TESTE</string>
+    <string name="button_TesteLogin">Teste</string>
 </resources>
