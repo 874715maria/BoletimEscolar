@@ -11,17 +11,19 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingBottom="@dimen/activity_vertical_margin"
-    tools:context=".ui.login.LoginActivity">
+    tools:context=".CadastroUsuarioActivity">
 
     <ImageButton
-        android:id="@+id/Button_Voltar"
+        android:id="@+id/imageButton_voltarMainActivity"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:contentDescription="@string/imageButton_Voltar"
-        tools:src="@drawable/ic_back" />
+        android:src="@drawable/ic_back2x"
+        android:visibility="visible"
+        tools:srcCompat="@drawable/ic_back2x" />
 
     <TextView
-        android:id="@+id/textView_Registro"
+        android:id="@+id/textView_Login"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
@@ -33,7 +35,7 @@
 
     <EditText
         android:id="@+id/inputText_Nome"
-        android:layout_width="370dp"
+        android:layout_width="match_parent"
         android:layout_height="40dp"
         android:layout_marginTop="16dp"
         android:background="#ffffff"
@@ -44,7 +46,7 @@
 
     <EditText
         android:id="@+id/inputText_email"
-        android:layout_width="370dp"
+        android:layout_width="match_parent"
         android:layout_height="40dp"
         android:layout_marginTop="16dp"
         android:background="#ffffff"
@@ -55,7 +57,7 @@
 
     <EditText
         android:id="@+id/inputText_password"
-        android:layout_width="370dp"
+        android:layout_width="match_parent"
         android:layout_height="40dp"
         android:layout_marginTop="16dp"
         android:background="#ffffff"
@@ -67,9 +69,9 @@
         android:selectAllOnFocus="true" />
 
     <Button
-        android:id="@+id/button_Salvar"
-        android:layout_width="370dp"
-        android:layout_height="40dp"
+        android:id="@+id/button_salvarCadastro"
+        android:layout_width="379dp"
+        android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
         android:background="#000000"
         android:enabled="false"

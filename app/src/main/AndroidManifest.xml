@@ -4,24 +4,25 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/ic_boletim"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@mipmap/ic_boletim_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".LoginActivity" />
+        <activity
+            android:name=".ui.login.LoginActivity"
+            android:label="@string/title_activity_login" />
+        <activity android:name=".CadastroUsuarioActivity" />
         <activity
             android:name=".NotaActivity"
             android:label="@string/title_activity_nota"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".MateriaActivity"
             android:label="@string/title_activity_materia"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".UsuarioActivity" />
-        <activity android:name=".SplashScreen" />
-        <activity
-            android:name=".ui.login.LoginActivity"
-            android:label="@string/title_activity_login" />
+        <activity android:name=".UsuarioActivity" /> <!-- <activity android:name=".SplashScreen" /> -->
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

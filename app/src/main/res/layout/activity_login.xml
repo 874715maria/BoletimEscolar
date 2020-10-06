@@ -13,24 +13,23 @@
     tools:context=".ui.login.LoginActivity">
 
     <ImageButton
-        android:id="@+id/Button_Voltar"
+        android:id="@+id/button_voltarMainActivityLogin"
+        android:contentDescription="@string/imageButton_Voltar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="11dp"
-        android:contentDescription="@string/imageButton_Voltar"
-        app:layout_constraintBottom_toTopOf="@+id/textView_Registro"
-        app:layout_constraintEnd_toEndOf="@+id/textView_Registro"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="@+id/textView_Registro"
+        app:layout_constraintBottom_toTopOf="@+id/textView_Login"
+        app:layout_constraintEnd_toEndOf="@+id/textView_Login"
+        app:layout_constraintStart_toStartOf="@+id/textView_Login"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0"
-        app:srcCompat="?attr/actionModeCloseDrawable"
+        app:srcCompat="@drawable/ic_back2x"
         tools:visibility="visible" />
 
     <TextView
-        android:id="@+id/textView_Registro"
+        android:id="@+id/textView_Login"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
         android:layout_marginEnd="260dp"
         android:fontFamily="sans-serif"
         android:text="@string/textView_Login"
@@ -40,7 +39,7 @@
         app:layout_constraintBottom_toTopOf="@+id/inputText_email"
         app:layout_constraintEnd_toEndOf="@+id/inputText_email"
         app:layout_constraintHorizontal_bias="0.394"
-        app:layout_constraintStart_toStartOf="@+id/inputText_email"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.862" />
 
@@ -50,11 +49,13 @@
         android:layout_height="40dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="112dp"
+        android:layout_marginEnd="8dp"
         android:background="#ffffff"
         android:hint="@string/prompt_email"
         android:importantForAutofill="no"
         android:inputType="textEmailAddress"
         android:selectAllOnFocus="true"
+        android:textAlignment="center"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -64,7 +65,9 @@
         android:id="@+id/inputText_password"
         android:layout_width="370dp"
         android:layout_height="40dp"
+        android:layout_marginStart="8dp"
         android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
         android:background="#ffffff"
         android:hint="@string/prompt_password"
         android:imeActionLabel="@string/action_sign_in_short"
@@ -72,39 +75,29 @@
         android:importantForAutofill="no"
         android:inputType="textPassword"
         android:selectAllOnFocus="true"
+        android:textAlignment="center"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/inputText_email" />
 
     <Button
-        android:id="@+id/button_Salvar"
-        android:layout_width="321dp"
+        android:id="@+id/button_entrarLogin"
+        android:layout_width="370dp"
         android:layout_height="47dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        android:layout_marginEnd="24dp"
+        android:layout_marginEnd="8dp"
         android:background="#000000"
         android:enabled="false"
+        android:text="@string/textViewButton_Entrar"
+        android:textColor="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/inputText_password"
         app:layout_constraintVertical_bias="0.031" />
-
-    <TextView
-        android:id="@+id/textViewButton_Salvar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/textViewButton_Entrar"
-        android:textAlignment="center"
-        android:textColor="#FFFFFF"
-        app:layout_constraintBottom_toBottomOf="@+id/button_Salvar"
-        app:layout_constraintEnd_toEndOf="@+id/button_Salvar"
-        app:layout_constraintHorizontal_bias="0.48"
-        app:layout_constraintStart_toStartOf="@+id/button_Salvar"
-        app:layout_constraintTop_toTopOf="@+id/button_Salvar" />
 
     <ProgressBar
         android:id="@+id/loading"

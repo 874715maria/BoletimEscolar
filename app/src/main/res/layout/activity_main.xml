@@ -6,7 +6,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#0A5517"
-    android:textAlignment="center">
+    android:textAlignment="center"
+    tools:context=".MainActivity">
 
     <TextView
         android:id="@+id/textView_BemVindo"
@@ -31,31 +32,27 @@
         android:id="@+id/button_entrar"
         android:layout_width="130dp"
         android:layout_height="40dp"
-        android:layout_marginTop="200dp"
-        android:layout_marginBottom="100dp"
+        android:layout_marginStart="8dp"
         android:background="#FFFFFF"
-        android:onClick="chamarTelaLogin"
         android:text="@string/textViewButton_Entrar"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/button_registrar"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/textView_BemVindo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.04"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView_BemVindo" />
 
     <Button
-        android:id="@+id/button_registrar"
+        android:id="@+id/button_registrarUsuario"
         android:layout_width="130dp"
         android:layout_height="40dp"
-        android:layout_marginTop="200dp"
-        android:layout_marginBottom="100dp"
+        android:layout_marginEnd="8dp"
         android:background="#000000"
-        android:onClick="chamarTelaCadastro"
         android:text="@string/textViewButton_Registrar"
         android:textColor="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/textView_BemVindo"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toEndOf="@id/button_entrar"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView_BemVindo" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
