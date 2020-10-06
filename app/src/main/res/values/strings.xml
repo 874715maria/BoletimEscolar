@@ -26,7 +26,8 @@
     <string name="textViewButton_Entrar">ENTRAR</string>
     <string name="textView_Login">Login</string>
     <string name="imageButton_Voltar">Voltar</string>
-    <string name="textView_Registro">Registrar</string>
+    <string name="textView_Preencha">Preencha</string>
+    <string name="textViewButton_Registrar">Registrar</string>
     <string name="textViewButton_Proximo"> Próximo </string>
     <string name="textViewButton_Salvar">Salvar</string>
     <string name="textViewButton_Voltar">Voltar</string>
