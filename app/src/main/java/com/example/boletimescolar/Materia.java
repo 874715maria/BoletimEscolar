@@ -5,7 +5,11 @@ public class Materia extends _Default{
     private int id;
     private String nome;
 
-    public Materia (){
+    public Materia(){
+    }
+    public Materia(String nome){
+    }
+    public Materia (int id, String nome){
         super();
         this.nome = nome;
         this.id = id;

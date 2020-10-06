@@ -6,12 +6,14 @@ import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
 public class NotaActivity extends AppCompatActivity {
 
-    private Nota nota;
+    private Button buttonSalvar, buttonCancelar;
+
     private EditText editTextPeriodo;
     private EditText editTextUnidade;
     private EditText editTextNota;
@@ -21,23 +23,23 @@ public class NotaActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cadasto_nota);
 
-        this.nota = new Nota();
-        this.editTextPeriodo = (EditText) findViewById(R.id.editTextPeriodo);
-        this.editTextUnidade = (EditText) findViewById(R.id.editTextUnidade);
-        this.editTextNota = (EditText) findViewById(R.id.editTextNota);
+        buttonSalvar = (Button) findViewById(R.id.buttonSalvar);
+        buttonCancelar = (Button) findViewById(R.id.buttonCancelar);
 
-        Intent intent = getIntent();
-        if(intent != null) {
-            Bundle bundle = intent.getExtras();
-            if (bundle != null) {
-                this.nota.setId(bundle.getInt("id"));
-                this.editTextPeriodo.setText(bundle.getString("periodo"));
-                this.editTextUnidade.setText(bundle.getString("unidade"));
-                this.editTextNota.setText(bundle.getString("nota"));
-            }
-        }
+        editTextPeriodo = (EditText) findViewById(R.id.editTextPeriodo);
+        editTextUnidade = (EditText) findViewById(R.id.editTextUnidade);
+        editTextNota = (EditText) findViewById(R.id.editTextNota);
     }
-    public void salvar (View view){
+    public void salvarNota(View view) {
+        Intent intent = new Intent(this, InicioActivity.class);
+        startActivity(intent);
+    }
+
+    //Metodo para voltar para a tela inicial do app (não logado/tela de cadastro e login)
+    public void voltarMainActivity(View view) {
+        finish();
+    }
+    /*public void salvar (View view){
         this.nota.setPeriodo(this.editTextPeriodo.getText().toString());
         this.nota.setUnidade(this.editTextUnidade.getText().toString());
         this.nota.setNota(this.editTextNota.getText().toString());
@@ -50,5 +52,5 @@ public class NotaActivity extends AppCompatActivity {
 
     public void cancelar (View view){
         finish();
-    }
+    }*/
 }

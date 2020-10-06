@@ -18,6 +18,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="11dp"
         android:contentDescription="@string/imageButton_Voltar"
+        android:onClick="voltarMainActivity"
         app:layout_constraintBottom_toTopOf="@+id/textView_Login"
         app:layout_constraintEnd_toEndOf="@+id/textView_Login"
         app:layout_constraintStart_toStartOf="@+id/textView_Login"
@@ -82,22 +83,28 @@
         app:layout_constraintTop_toBottomOf="@+id/inputText_email" />
 
     <Button
-        android:id="@+id/button_entrarLogin"
+        android:id="@+id/buttonLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/CadastrarNota"
+        android:onClick="efetuarLogin"/>
+
+    <Button
+        android:id="@+id/button_entrar"
         android:layout_width="370dp"
         android:layout_height="47dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
-        android:background="#000000"
-        android:enabled="false"
+        android:background="#FFFFFF"
         android:text="@string/textViewButton_Entrar"
-        android:textColor="#FFFFFF"
+        android:onClick="efetuarLogin"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/inputText_password"
-        app:layout_constraintVertical_bias="0.031" />
+        app:layout_constraintVertical_bias="0.031"/>
 
     <ProgressBar
         android:id="@+id/loading"

@@ -7,7 +7,17 @@ public class Nota extends _Default{
     private String unidade;
     private String nota;
 
-    public Nota(){
+    public Nota (){
+    }
+
+    public Nota (String periodo, String nota, String unidade){
+        super();
+        this.id = id;
+        this.nota = nota;
+        this.periodo = periodo;
+        this.unidade = unidade;
+    }
+    public Nota (String periodo, int id, String nota, String unidade){
         super();
         this.id = id;
         this.nota = nota;
@@ -26,7 +36,7 @@ public class Nota extends _Default{
     public String getPeriodo() {
         return periodo;
     }
-    public void salvar(){
+    /*public void salvar(){
         String comando = "";
         if (this.getId() == id){
             comando = String.format("INSERT INTO Nota(periodo, unidade, nota);",
@@ -40,7 +50,7 @@ public class Nota extends _Default{
     public void apagar(){
         String comando = String.format("DELETE FROM Nota WHERE id = id);", this.getId());
 
-    }
+    }*/
 
     public void setPeriodo(String periodo) {
         this.periodo = periodo;

@@ -58,4 +58,6 @@
     <string name="textViewButton_Salvar2">Salvar 2</string>
     <string name="TesteActivity">TESTE</string>
     <string name="button_TesteLogin">Teste</string>
+    <string name="nomemateria">Nome da Matéria</string>
+    <string name="title_activity_main2">MainActivity</string>
 </resources>

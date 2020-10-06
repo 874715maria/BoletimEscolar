@@ -2,35 +2,33 @@ package com.example.boletimescolar;
 
 import android.content.Intent;
 import android.os.Bundle;
+
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.google.android.material.snackbar.Snackbar;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.Toast;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 public class InicioActivity extends AppCompatActivity {
-    //private ListView listViewAluno;
 
-    // private Button CadastrarUsuario;
-    // private Button CadastrarMateria;
-    //  private Button CadastrarNota;
-
-    //private Button Salvar;
-    //private Button Cancelar;
+    private Button buttonCadastrarUsuario;
+    private Button buttonCadastrarMateria;
+    private Button buttonCadastrarNota;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_inicio);
 
-        //this.listViewAluno = (ListView) findViewById(R.id.listViewAluno);
-        //this.listViewAluno.setAdapter(new AlunoAdapter(this,new Aluno().getLista()));
-
-
-        //CadastrarUsuario = (Button) findViewById(R.id.CadastrarUsuario);
-        // CadastrarMateria = (Button) findViewById(R.id.CadastrarMateria);
-        //CadastrarNota = (Button) findViewById(R.id.CadastrarNota);//
+        buttonCadastrarUsuario = (Button) findViewById(R.id.CadastrarUsuario);
+        buttonCadastrarMateria = (Button) findViewById(R.id.CadastrarMateria);
+        buttonCadastrarNota = (Button) findViewById(R.id.CadastrarNota);
 
     }
 

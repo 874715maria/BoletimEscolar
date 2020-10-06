@@ -7,6 +7,7 @@ import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
@@ -14,30 +15,32 @@ import static com.example.boletimescolar.R.menu.menu_main;
 
 public class MateriaActivity extends AppCompatActivity {
 
-    private Materia materia;
+    private Button buttonSalvar, buttonCancelar;
+
     private EditText editTextTextPersonName;
 
-
-    @SuppressLint("ResourceType")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cadastro_materia);
-        setContentView(menu_main);
 
-        this.materia = new Materia();
-        this.editTextTextPersonName = (EditText) findViewById(R.id.editTextTextPersonName);
+        buttonSalvar =  (Button) findViewById(R.id.buttonSalvar);
+        buttonCancelar = (Button) findViewById(R.id.buttonCancelar);
 
-        Intent intent = getIntent();
-        if(intent != null){
-            Bundle bundle = intent.getExtras();
-            if(bundle != null){
-                this.materia.setId(bundle.getInt("id"));
-                this.editTextTextPersonName.setText(bundle.getString("nome"));
-            }
-        }
+        editTextTextPersonName = (EditText) findViewById(R.id.editTextTextPersonName);
+
     }
-    public void salvar (View view){
+    public void salvarMateria(View view) {
+        Intent intent = new Intent(this, InicioActivity.class);
+        startActivity(intent);
+    }
+
+    //Metodo para voltar para a tela inicial dos cadastros
+    public void voltarMainActivity(View view) {
+       finish();
+    }
+
+   /* public void salvar (View view){
         this.materia.setNome(this.editTextTextPersonName.getText().toString());
         this.materia.salvar();
 
@@ -48,5 +51,5 @@ public class MateriaActivity extends AppCompatActivity {
 
     public void cancelar (View view){
         finish();
-    }
+    }*/
 }

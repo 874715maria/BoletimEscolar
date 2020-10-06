@@ -14,6 +14,16 @@ public class Aluno extends _Default {
 
 
     public Aluno (){
+    }
+    public Aluno (String nome, String idade, String email, String nomeEscola){
+        super();
+        this.id = id;
+        this.nome = nome;
+        this.idade = idade;
+        this.email = email;
+        this.nomeEscola = nomeEscola;
+    }
+    public Aluno (int id, String nome, String idade, String email, String nomeEscola){
         super();
         this.id = id;
         this.nome = nome;

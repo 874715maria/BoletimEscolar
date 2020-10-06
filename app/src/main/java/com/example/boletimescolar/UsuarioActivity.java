@@ -5,12 +5,13 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
 public class UsuarioActivity extends AppCompatActivity {
 
-    private Aluno aluno;
+    private Button buttonSalvar, buttonCancelar;
 
     private EditText editTextNome;
     private EditText editTextIdade;
@@ -22,25 +23,24 @@ public class UsuarioActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_usuario);
 
-        this.aluno = new Aluno();
-        this.editTextNome = (EditText) findViewById(R.id.editTextNome);
-        this.editTextIdade = (EditText) findViewById(R.id.editTextIdade);
-        this.editTextEmail = (EditText) findViewById(R.id.editTextEmail);
-        this.editTextNomeEscola = (EditText) findViewById(R.id.editTextNomeEscola);
+        buttonSalvar = (Button) findViewById(R.id.buttonSalvar);
+        buttonCancelar = (Button) findViewById(R.id.buttonCancelar);
 
-        Intent intent = getIntent();
-        if(intent != null){
-            Bundle bundle = intent.getExtras();
-            if(bundle != null){
-                    this.aluno.setId(bundle.getInt("id"));
-                    this.editTextNome.setText(bundle.getString("nome"));
-                    this.editTextIdade.setText(bundle.getString("idade"));
-                    this.editTextEmail.setText(bundle.getString("email"));
-                    this.editTextNomeEscola.setText(bundle.getString("nomeEscola"));
-            }
-        }
+        editTextNome = (EditText) findViewById(R.id.editTextNome);
+        editTextIdade = (EditText) findViewById(R.id.editTextIdade);
+        editTextEmail = (EditText) findViewById(R.id.editTextEmail);
+        editTextNomeEscola = (EditText) findViewById(R.id.editTextNomeEscola);
     }
-    public void salvar (View view){
+    public void salvarUsuario(View view) {
+        Intent intent = new Intent(this, InicioActivity.class);
+        startActivity(intent);
+    }
+
+    //Metodo para voltar para a tela inicial do app (não logado/tela de cadastro e login)
+    public void voltarMainActivity(View view) {
+       finish();
+    }
+    /*public void salvar (View view){
         this.aluno.setNome(this.editTextNome.getText().toString());
         this.aluno.setIdade(this.editTextIdade.getText().toString());
         this.aluno.setEmail(this.editTextEmail.getText().toString());
@@ -54,5 +54,5 @@ public class UsuarioActivity extends AppCompatActivity {
 
          public void cancelar (View view){
             finish();
-        }
+        }*/
 }
