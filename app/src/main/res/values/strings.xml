@@ -1,6 +1,5 @@
 <resources>
     <string name="app_name">Boletim Escolar</string>
-    <string name="CadastrarUsuario">Cadastrar Usuário</string>
     <string name="CadastrarMateria">Cadastrar Matéria</string>
     <string name="CadastrarNota">Cadastrar Nota</string>
     <string name="nome">Nome</string>
@@ -38,10 +37,11 @@
 
     //itens para o menu
     <string name="action_sair">Sair</string>
-    <string name="action_consulta">Consulta</string>
-    <string name="action_cadastro">Cadastro</string>
-    <string name="cadastro_boletim">Boletim</string>
-    <string name="cadastro_materia">Matéria</string>
+    <string name="action_notas">Notas</string>
+    <string name="action_materias">Matérias</string>
+    <string name="action_conta">Conta</string>
+    <string name="cadastro_nota">Cadastrar</string>
+    <string name="cadastro_materia">Cadastrar</string>
     <string name="consultar_boletim">Boletim</string>
     <string name="consultar_materia">Matéria</string>
     <string name="title_activity_materia">MateriaActivity</string>
@@ -60,4 +60,19 @@
     <string name="button_TesteLogin">Teste</string>
     <string name="nomemateria">Nome da Matéria</string>
     <string name="title_activity_main2">MainActivity</string>
+    <string name="title_activity_menu_teste">MainActivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="title_activity_home">HomeActivity</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
+
 </resources>

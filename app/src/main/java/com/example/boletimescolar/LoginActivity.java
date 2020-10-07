@@ -12,7 +12,7 @@ import androidx.appcompat.app.AppCompatActivity;
 public class LoginActivity extends AppCompatActivity {
 
     private ImageButton imageButton_voltarMainActivity;
-    private Button button_entrarLogin, button_entrar, buttonLogin;
+    private Button button_entrar;
     private EditText inputText_email, inputText_password;
 
     @Override
@@ -20,13 +20,11 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        buttonLogin = (Button) findViewById(R.id.buttonLogin);
         button_entrar = (Button) findViewById(R.id.button_entrar);
         imageButton_voltarMainActivity = (ImageButton) findViewById(R.id.button_voltarMainActivityLogin);
 
         inputText_email = (EditText) findViewById(R.id.inputText_email);
         inputText_password = (EditText) findViewById(R.id.inputText_password);
-
     }
 
     //Metodo para fazer o login e ir para a tela início do app (quando logado)
@@ -39,6 +37,4 @@ public class LoginActivity extends AppCompatActivity {
     public void voltarMainActivity(View view) {
         finish();
     }
-
-
 }

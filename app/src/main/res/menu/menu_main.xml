@@ -1,39 +1,47 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context="exemplo.webmobile.android.conexaoexterna.ListaActivity">
+    tools:context=".InicioActivity">
 
     <item
-        android:id="@+id/action_cadastro"
+        android:id="@+id/action_materias"
         android:orderInCategory="101"
-        android:title="@string/action_cadastro"
+        android:title="@string/action_materias"
         app:showAsAction="never">
         <menu>
-            <item android:id="@+id/cadastro_materia"
-                android:title="@string/cadastro_materia"
-                android:onClick="abreCadastrarMateria"/>
-            <item android:id="@+id/cadastro_bolatim"
-                android:title="@string/cadastro_boletim"
-                android:onClick="abreCadastrarNota"/>
-            </menu>
-        </item>
-
-    <item
-        android:id="@+id/action_consulta"
-        android:orderInCategory="102"
-        android:title="@string/action_consulta"
-        app:showAsAction="never" >
-        <menu>
-            <item android:id="@+id/consulta_materia"
-                android:title="@string/consultar_boletim"/>
-            <item android:id="@+id/consulta_bolatim"
-                android:title="@string/consultar_materia"/>
+            <item
+                android:id="@+id/cadastrar_materia"
+                android:onClick="abreCadastrarMateria"
+                android:title="@string/cadastro_materia" />
+            <item
+                android:id="@+id/cadastrar_nota"
+                android:onClick="abreCadastrarNota"
+                android:title="@string/CadastrarNota" />
         </menu>
     </item>
+
+    <item
+        android:id="@+id/action_notas"
+        android:orderInCategory="102"
+        android:title="@string/action_notas"
+        app:showAsAction="never">
+        <menu>
+            <item
+                android:id="@+id/consulta_materia"
+                android:title="@string/consultar_boletim" />
+            <item
+                android:id="@+id/consulta_bolatim"
+                android:title="@string/consultar_materia" />
+        </menu>
+    </item>
+    <item
+        android:id="@+id/action_contaUsuario"
+        android:orderInCategory="103"
+        android:title="@string/action_conta"
+        app:showAsAction="never"></item>
     <item
         android:id="@+id/action_sair"
         android:orderInCategory="104"
         android:title="@string/action_sair"
         app:showAsAction="never" />
-
 </menu>

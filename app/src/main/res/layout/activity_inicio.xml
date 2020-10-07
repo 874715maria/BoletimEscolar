@@ -1,35 +1,30 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#0A5517"
-    android:orientation="vertical">
+    android:textAlignment="center"
+    tools:context=".MainActivity">
 
     <TextView
+        android:id="@+id/textView_BemVindo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:padding="24dp"
+        android:background="#00FFFFFF"
         android:text="@string/bemvindo"
-        android:textColor="#FFFFFF" />
-
-    <Button
-        android:id="@+id/CadastrarUsuario"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/CadastrarUsuario"
-        android:onClick="abreCadastrarUsuario"/>
-
-    <Button
-        android:id="@+id/CadastrarMateria"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/CadastrarMateria"
-        android:onClick="abreCadastrarMateria"/>
-
-    <Button
-        android:id="@+id/CadastrarNota"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/CadastrarNota"
-        android:onClick="abreCadastrarNota"/>
-</LinearLayout>
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="36sp"
+        android:typeface="normal"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.25"
+        tools:visibility="visible" />
+</androidx.constraintlayout.widget.ConstraintLayout>
