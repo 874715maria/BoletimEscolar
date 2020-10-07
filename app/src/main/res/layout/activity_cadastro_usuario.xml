@@ -71,14 +71,12 @@
 
     <Button
         android:id="@+id/button_salvarCadastro"
-        android:layout_width="379dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:background="#000000"
-        android:onClick="salvarCadastro"
-        android:enabled="false"
+        android:layout_width="130dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="8dp"
+        android:background="#FFFFFF"
         android:text="@string/textViewButton_Salvar"
-        android:textColor="#FFFFFF" />
+        android:onClick="salvarCadastro" />
 
     <ProgressBar
         android:id="@+id/loading"
