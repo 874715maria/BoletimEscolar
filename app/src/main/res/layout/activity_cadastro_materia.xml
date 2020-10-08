@@ -7,52 +7,60 @@
     android:background="#0A5517">
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/textView_preenchaCampo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="64dp"
-        android:text="Preencha o Campo"
+        android:text="@string/textView_preenchaCampo"
         android:textColor="#FFFFFF"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/editText_nomeMateria"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName"
-        android:layout_width="370dp"
+        android:id="@+id/editText_nomeMateria"
+        android:layout_width="match_parent"
         android:layout_height="40dp"
-        android:layout_marginTop="20dp"
-
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="64dp"
+        android:layout_marginEnd="16dp"
         android:background="#ffffff"
+        android:autofillHints="@string/nomemateria"
         android:ems="10"
+        android:hint="@string/nomemateria"
         android:inputType="textPersonName"
-        android:text="@string/nomemateria"
+        android:textColorHint="#9E000000"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.487"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toBottomOf="@+id/textView_preenchaCampo" />
 
     <Button
         android:id="@+id/buttonCancelar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/cancelar"
         android:onClick="voltarMainActivity"
+        android:text="@string/cancelar"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.229"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/editText_nomeMateria"
         tools:layout_editor_absoluteY="198dp" />
 
     <Button
         android:id="@+id/buttonSalvar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/salvar"
         android:onClick="salvarMateria"
+        android:text="@string/salvar"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.727"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/editText_nomeMateria"
         tools:layout_editor_absoluteY="198dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

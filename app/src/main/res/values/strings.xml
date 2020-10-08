@@ -91,5 +91,8 @@
     <string name="menu_slideshow">Slideshow</string>
     <string name="textView_PreenchaCampos">Preencha os campos</string>
     <string name="Nota">Nota. Ex.: 8.0</string>
+    <string name="textView_materiasCadastradas">Matérias Cadastradas</string>
+    <string name="textView_preenchaCampo">Preencha o campo</string>
+    <string name="textView_dadosUsuario">Dados do Aluno</string>
 
 </resources>

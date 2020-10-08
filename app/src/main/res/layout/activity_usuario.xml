@@ -5,72 +5,87 @@
     android:gravity="center"
     android:orientation="vertical">
 
+    <TextView
+        android:id="@+id/textView_dadosUsuario"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:autofillHints=""
+        android:text="@string/textView_dadosUsuario"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp" />
+
     <EditText
         android:id="@+id/editTextNome"
-        android:layout_width="370dp"
+        android:layout_width="match_parent"
         android:layout_height="40dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:background="#ffffff"
-        android:clickable="false"
+        android:clickable="true"
         android:ems="10"
-        android:shadowColor="#000000"
-        android:text="@string/nome" />
+        android:inputType="text"
+        android:shadowColor="#000000" />
 
     <EditText
         android:id="@+id/editTextIdade"
-        android:layout_width="370dp"
+        android:layout_width="match_parent"
         android:layout_height="40dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="8dp"
         android:background="#ffffff"
         android:ems="10"
+        android:inputType="number"
         android:shadowColor="#FFFFFF"
-        android:text="@string/idade"
         android:textAllCaps="false"
         android:textColor="#000000" />
 
     <EditText
         android:id="@+id/editTextEmail"
-        android:layout_width="370dp"
+        android:layout_width="match_parent"
         android:layout_height="40dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="8dp"
         android:background="#ffffff"
-
         android:ems="10"
-        android:shadowColor="#FFFFFF"
-        android:text="@string/email"
+        android:inputType="textEmailAddress"
+
         android:textColor="#000000" />
 
     <EditText
         android:id="@+id/editTextNomeEscola"
-        android:layout_width="370dp"
+        android:layout_width="match_parent"
         android:layout_height="40dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="8dp"
         android:background="#ffffff"
-        android:ems="10"
-        android:shadowColor="#FFFFFF"
-        android:text="@string/nomeEscola"
+        android:inputType="text"
         android:textColor="#000000" />
 
-    <Button
-        android:id="@+id/buttonSalvar"
+    <LinearLayout
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="salvarUsuario"
-        android:text="@string/salvar" />
+        android:layout_height="match_parent"
+        android:layout_marginTop="32dp">
 
-    <Button
-        android:id="@+id/buttonCancelar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="voltarMainActivity"
-        android:text="@string/cancelar" />
+        <Button
+            android:id="@+id/buttonSalvar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="32dp"
+            android:onClick="salvarUsuario"
+            android:text="@string/salvar" />
 
+        <Button
+            android:id="@+id/buttonCancelar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:onClick="voltarMainActivity"
+            android:text="@string/cancelar" />
+    </LinearLayout>
 </LinearLayout>

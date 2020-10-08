@@ -1,19 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#0A5517"
     android:textAlignment="center">
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/textView_preenchaCampo"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:autoText="false"
         android:background="#00FFFFFF"
-        android:text="Materias Cadastradas"
+        android:text="@string/textView_materiasCadastradas"
         android:textAlignment="center"
         android:textColor="#FFFFFF"
         android:textSize="36sp"
@@ -27,7 +25,7 @@
         app:layout_constraintVertical_bias="0.057" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/button_voltar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="259dp"
@@ -36,7 +34,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.86"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/textView_preenchaCampo"
         app:layout_constraintVertical_bias="0.65" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
