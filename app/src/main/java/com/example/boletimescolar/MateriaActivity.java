@@ -1,6 +1,5 @@
 package com.example.boletimescolar;
 
-import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 
@@ -9,9 +8,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.Toast;
-
-import static com.example.boletimescolar.R.menu.menu_main;
 
 public class MateriaActivity extends AppCompatActivity {
 
@@ -27,7 +23,7 @@ public class MateriaActivity extends AppCompatActivity {
         buttonSalvar =  (Button) findViewById(R.id.buttonSalvar);
         buttonCancelar = (Button) findViewById(R.id.buttonCancelar);
 
-        editTextTextPersonName = (EditText) findViewById(R.id.editTextTextPersonName);
+        editTextTextPersonName = (EditText) findViewById(R.id.editText_nomeMateria);
 
     }
     public void salvarMateria(View view) {
