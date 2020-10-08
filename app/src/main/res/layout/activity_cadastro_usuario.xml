@@ -35,17 +35,6 @@
         android:textSize="24sp" />
 
     <EditText
-        android:id="@+id/inputText_Nome"
-        android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:layout_marginTop="16dp"
-        android:background="#ffffff"
-        android:hint="@string/inputText_Nome"
-        android:importantForAutofill="no"
-        android:inputType="textShortMessage"
-        android:selectAllOnFocus="true" />
-
-    <EditText
         android:id="@+id/inputText_email"
         android:layout_width="match_parent"
         android:layout_height="40dp"

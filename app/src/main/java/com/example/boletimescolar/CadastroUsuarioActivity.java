@@ -6,10 +6,16 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
 import com.google.firebase.FirebaseApp;
+import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
@@ -19,7 +25,9 @@ public class CadastroUsuarioActivity extends AppCompatActivity {
 
     private ImageButton imageButton_voltarMainActivity;
     private Button button_salvarCadastro;
-    private EditText inputText_Nome, inputText_Email, inputText_Password;
+    private EditText inputText_Email, inputText_Password;
+
+    private FirebaseAuth auth;
 
     FirebaseDatabase firebaseDatabase;
     DatabaseReference databaseReference;
@@ -35,14 +43,35 @@ public class CadastroUsuarioActivity extends AppCompatActivity {
         button_salvarCadastro.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                salvar();
+                String email = inputText_Email.getText().toString().trim();
+                String password = inputText_Password.getText().toString().trim();
+                criarUser(email, password);
             }
         });
-        inputText_Nome = (EditText) findViewById(R.id.inputText_Nome);
         inputText_Email = (EditText) findViewById(R.id.inputText_email);
         inputText_Password = (EditText) findViewById(R.id.inputText_password);
 
 
+    }
+
+    private void criarUser(String email, String password) {
+        auth.createUserWithEmailAndPassword(email, password)
+                .addOnCompleteListener(CadastroUsuarioActivity.this, new OnCompleteListener<AuthResult>() {
+                    @Override
+                    public void onComplete(@NonNull Task<AuthResult> task) {
+                        if(task.isSuccessful()){
+                            alert("Usuário Cadastrado com Sucesso");
+                            Intent i = new Intent(CadastroUsuarioActivity.this, InicioActivity.class);
+                            finish();
+                        }else {
+                            alert("Erro de Cadastro");
+                        }
+                    }
+                });
+    }
+
+    private void alert (String msg){
+        Toast.makeText(CadastroUsuarioActivity.this, msg,Toast.LENGTH_SHORT).show();
     }
     public void inicializarFirebase(){
         FirebaseApp.initializeApp(CadastroUsuarioActivity.this);
@@ -52,7 +81,6 @@ public class CadastroUsuarioActivity extends AppCompatActivity {
     public void salvar(){
         Aluno aluno = new Aluno();
         aluno.setId(UUID.randomUUID().toString());
-        aluno.setNome(inputText_Nome.getText().toString());
         aluno.setEmail(inputText_Email.getText().toString());
         aluno.setPassword(inputText_Password.getText().toString());
 
@@ -60,7 +88,6 @@ public class CadastroUsuarioActivity extends AppCompatActivity {
         limparCampos();
     }
     public void limparCampos(){
-        inputText_Nome.setText("");
         inputText_Email.setText("");
         inputText_Password.setText("");
     }
@@ -74,5 +101,11 @@ public class CadastroUsuarioActivity extends AppCompatActivity {
     public void salvarCadastro() {
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        auth = Conexao.getFirebaseAuth();
     }
 }

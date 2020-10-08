@@ -2,7 +2,7 @@ package com.example.boletimescolar;
 
 public class Nota extends _Default{
 
-    private int id;
+    private String id;
     private String periodo;
     private String unidade;
     private String nota;
@@ -10,26 +10,11 @@ public class Nota extends _Default{
     public Nota (){
     }
 
-    public Nota (String periodo, String nota, String unidade){
-        super();
-        this.id = id;
-        this.nota = nota;
-        this.periodo = periodo;
-        this.unidade = unidade;
-    }
-    public Nota (String periodo, int id, String nota, String unidade){
-        super();
-        this.id = id;
-        this.nota = nota;
-        this.periodo = periodo;
-        this.unidade = unidade;
-    }
-
-    public int getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(String id) {
         this.id = id;
     }
 

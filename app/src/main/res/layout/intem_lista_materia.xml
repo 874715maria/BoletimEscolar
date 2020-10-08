@@ -12,14 +12,6 @@
         android:layout_height="wrap_content"
         android:text="@string/nome"
         android:textAppearance="?android:attr/textAppearanceMedium" />
-
-    <TextView
-        android:id="@+id/textViewEmail"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/email"
-        android:textAppearance="?android:attr/textAppearanceSmall" />
-
     <Button
         android:id="@+id/buttonApagar"
         android:layout_width="wrap_content"
