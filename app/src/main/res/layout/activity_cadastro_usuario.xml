@@ -75,8 +75,7 @@
         android:layout_height="40dp"
         android:layout_marginStart="8dp"
         android:background="#FFFFFF"
-        android:text="@string/textViewButton_Salvar"
-        android:onClick="salvarCadastro" />
+        android:text="@string/textViewButton_Salvar" />
 
     <ProgressBar
         android:id="@+id/loading"

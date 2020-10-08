@@ -1,81 +1,20 @@
 package com.example.boletimescolar;
 
-import java.sql.ResultSet;
-import java.util.ArrayList;
-
 public class Aluno extends _Default {
 
-    private int id;
+    private String id;
     private String nome;
-    private String idade;
     private String email;
-    private String nomeEscola;
+    private String password;
 
-
-
-    public Aluno (){
-    }
-    public Aluno (String nome, String idade, String email, String nomeEscola){
-        super();
-        this.id = id;
-        this.nome = nome;
-        this.idade = idade;
-        this.email = email;
-        this.nomeEscola = nomeEscola;
-    }
-    public Aluno (int id, String nome, String idade, String email, String nomeEscola){
-        super();
-        this.id = id;
-        this.nome = nome;
-        this.idade = idade;
-        this.email = email;
-        this.nomeEscola = nomeEscola;
+    public Aluno() {
     }
 
-   // public ArrayList<Aluno> getLista(){
-
-       // ArrayList<Aluno> lista = new ArrayList<>();
-       // try {
-         //   ResultSet resultSet = select("SELECT * FROM usuario");
-          //  if (resultSet != null){
-             //   while (resultSet.next()){
-               //     Aluno obj = new Aluno();
-                //    obj.setId(resultSet.getInt("id"));
-               //     obj.setNome(resultSet.getString("nome"));
-                 //   obj.setIdade(resultSet.getString("idade"));
-                  //  obj.setEmail(resultSet.getString("email"));
-                  //  obj.setNomeEscola(resultSet.getString("nomeEscola"));
-                  //  lista.add(obj);
-                  //  obj = null;
-               // }
-            //}
-      //  }catch (Exception ex){
-          //  this.mensagem = ex.getMessage();
-        //    this._status = false;
-      //  }
-      //  return lista;
-   // }
-
-    public void salvar(){
-        String comando = "";
-        if (this.getId() == id){
-            comando = String.format("INSERT INTO Aluno(nome, idade, email, nomeEscola);",
-                    this.getNome(), this.getIdade(), this.getEmail(), this.getNomeEscola());
-        }else {
-            comando = String.format("UPDATE Aluno SET nome = nome, idade = idade, email = email, nomeEscola = nomeEscola WHERE id = id;",
-                    this.getNome(), this.getIdade(), this.getEmail(), this.getNomeEscola(), this.getId());
-        }
-    }
-    public void apagar(){
-        String comando = String.format("DELETE FROM Aluno WHERE id = id);", this.getId());
-
-    }
-
-    public int getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(String id) {
         this.id = id;
     }
 
@@ -87,14 +26,6 @@ public class Aluno extends _Default {
         this.nome = nome;
     }
 
-    public String getIdade() {
-        return idade;
-    }
-
-    public void setIdade(String idade) {
-        this.idade = idade;
-    }
-
     public String getEmail() {
         return email;
     }
@@ -103,11 +34,16 @@ public class Aluno extends _Default {
         this.email = email;
     }
 
-    public String getNomeEscola() {
-        return nomeEscola;
+    public String getPassword() {
+        return password;
     }
 
-    public void setNomeEscola(String nomeEscola) {
-        this.nomeEscola = nomeEscola;
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    @Override
+    public String toString() {
+        return nome;
     }
 }

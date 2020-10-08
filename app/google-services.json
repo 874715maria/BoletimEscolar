@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "524046364209",
+    "firebase_url": "https://fir-boletimescolar.firebaseio.com",
+    "project_id": "fir-boletimescolar",
+    "storage_bucket": "fir-boletimescolar.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:524046364209:android:7ffa0b5230b8b171426f10",
+        "android_client_info": {
+          "package_name": "com.example.boletimescolar"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "524046364209-5mn0ln39n12alfl6d9bh7igacfidr419.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.boletimescolar",
+            "certificate_hash": "c45e17d227a7afdd39a165bd9f47b3ca553cab92"
+          }
+        },
+        {
+          "client_id": "524046364209-puddjphdvdv9dk9jhtjvvg4ubka3caff.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDXAqcDYEVkDrbHEqGa8BD9TrnZfyxfmQk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "524046364209-puddjphdvdv9dk9jhtjvvg4ubka3caff.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
