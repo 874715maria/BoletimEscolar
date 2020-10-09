@@ -1,35 +1,23 @@
 package com.example.boletimescolar;
 
-import android.annotation.SuppressLint;
-import android.content.ContentProviderClient;
 import android.content.Intent;
 import android.os.Bundle;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.view.ContextMenu;
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ListView;
 import android.widget.Toast;
 
 import com.google.firebase.FirebaseApp;
-import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.ValueEventListener;
-import com.google.firebase.storage.FirebaseStorage;
-import com.google.firebase.storage.StorageReference;
 
-import java.util.ArrayList;
-import java.util.List;
 import java.util.UUID;
-
-import static com.example.boletimescolar.R.menu.menu_main;
 
 public class MateriaActivity extends AppCompatActivity {
 
@@ -46,7 +34,6 @@ public class MateriaActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cadastro_materia);
         inicializarFirebase();
-        getMateriaEnviado();
 
         buttonSalvar =  (Button) findViewById(R.id.buttonSalvar);
         buttonSalvar.setOnClickListener(new View.OnClickListener() {
@@ -58,12 +45,49 @@ public class MateriaActivity extends AppCompatActivity {
         });
         buttonCancelar = (Button) findViewById(R.id.buttonCancelar);
 
-        editTextTextPersonName = (EditText) findViewById(R.id.editTextTextPersonName);
+        editTextTextPersonName = (EditText) findViewById(R.id.editText_nomeMateria);
 
     }
 
-    private void getMateriaEnviado() {
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.menu_main, menu);
+        return true;
     }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()){
+            case R.id.action_materias:
+                Toast.makeText(this, "Item Materia selecionado", Toast.LENGTH_SHORT).show();
+                return true;
+            case R.id.cadastrar_materia:
+                Toast.makeText(this, "Item Cadastrar materia selecionado", Toast.LENGTH_SHORT).show();
+                return true;
+            case R.id.cadastrar_nota:
+                Toast.makeText(this, "Item Cadastrar Nota Selecionado selecionado", Toast.LENGTH_SHORT).show();
+                return true;
+            case R.id.action_notas:
+                Toast.makeText(this, "Item Nota selecionado", Toast.LENGTH_SHORT).show();
+                return true;
+            case R.id.consulta_materia:
+                Toast.makeText(this, "Item Consultar Materia selecionado", Toast.LENGTH_SHORT).show();
+                return true;
+            case R.id.consulta_boletim:
+                Toast.makeText(this, "Item Consultar Boletim selecionado", Toast.LENGTH_SHORT).show();
+                return true;
+            case R.id.action_contaUsuario:
+                Toast.makeText(this, "Item Conta Usuario selecionado", Toast.LENGTH_SHORT).show();
+                return true;
+            case R.id.action_sair:
+                Toast.makeText(this, "Item Sair selecionado", Toast.LENGTH_SHORT).show();
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+    }
+
 
     public void inicializarFirebase(){
         FirebaseApp.initializeApp(MateriaActivity.this);

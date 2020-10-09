@@ -1,33 +1,21 @@
 package com.example.boletimescolar;
 
-import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.ContextMenu;
+
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.google.android.material.snackbar.Snackbar;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Button;
-import android.widget.EditText;
-import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
-
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-
-import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseUser;
-import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseError;
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.ValueEventListener;
-import com.google.firebase.storage.FirebaseStorage;
-import com.google.firebase.storage.StorageReference;
-
-import java.util.ArrayList;
-import java.util.List;
 
 public class InicioActivity extends AppCompatActivity {
 
@@ -37,30 +25,66 @@ public class InicioActivity extends AppCompatActivity {
     //FirebaseDatabase firebaseDatabase;
     //DatabaseReference databaseReference;
 
-   // private ListView listView;
-   // private StorageReference storageReference;
+    // private ListView listView;
+    // private StorageReference storageReference;
 
     //private List<Materia> materialist;
-   // private MateriaAdapter materiaAdapter;
+    // private MateriaAdapter materiaAdapter;
 
     //private Materia materia;
-    private TextView textEmail, textId;
 
-    private EditText editTextTextPersonName;
+    private TextView bemvindo;
 
     //private Materia materiaEscolhida;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_inicio);
-       // bancoDeDados();
-       // registerForContextMenu(listView);
-
-        textEmail = (TextView) findViewById(R.id.textEmail);
-        textId = (TextView) findViewById(R.id.textId);
+        // bancoDeDados();
+        // registerForContextMenu(listView);
+        bemvindo = (TextView) findViewById(R.id.textView_BemVindo);
     }
 
-    public void abreCadastrarMateria(View view) {
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+
+        getMenuInflater().inflate(R.menu.menu_teste, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()){
+            case R.id.action_materias:
+                Toast.makeText(this, "Item Materia selecionado", Toast.LENGTH_SHORT).show();
+                return true;
+            case R.id.cadastrar_materia:
+                Toast.makeText(this, "Item Cadastrar materia selecionado", Toast.LENGTH_SHORT).show();
+                return true;
+            case R.id.cadastrar_nota:
+                Toast.makeText(this, "Item Cadastrar Nota Selecionado selecionado", Toast.LENGTH_SHORT).show();
+                return true;
+            case R.id.action_notas:
+                Toast.makeText(this, "Item Nota selecionado", Toast.LENGTH_SHORT).show();
+                return true;
+            case R.id.consulta_materia:
+                Toast.makeText(this, "Item Consultar Materia selecionado", Toast.LENGTH_SHORT).show();
+                return true;
+            case R.id.consulta_boletim:
+                Toast.makeText(this, "Item Consultar Boletim selecionado", Toast.LENGTH_SHORT).show();
+                return true;
+            case R.id.action_contaUsuario:
+                Toast.makeText(this, "Item Conta Usuario selecionado", Toast.LENGTH_SHORT).show();
+                return true;
+            case R.id.action_sair:
+                Toast.makeText(this, "Item Sair selecionado", Toast.LENGTH_SHORT).show();
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+    }
+
+    /*public void abreCadastrarMateria(View view) {
         Intent intent = new Intent(this, MateriaActivity.class);
         startActivity(intent);
     }
@@ -68,7 +92,7 @@ public class InicioActivity extends AppCompatActivity {
     public void abreCadastrarNota(View view) {
         Intent intent = new Intent(this, NotaActivity.class);
         startActivity(intent);
-    }
+    }*/
     /*@Override
     public void onCreateContextMenu(ContextMenu menu, View v, ContextMenu.ContextMenuInfo menuInfo) {
         MenuItem mAlterar = menu.add("Alterar Materia");
@@ -126,9 +150,6 @@ public class InicioActivity extends AppCompatActivity {
     private void virificaUser() {
         if (firebaseUser == null){
             finish();
-        }else {
-            textEmail.setText("Email: "+ firebaseUser.getEmail());
-            textId.setText("ID: "+ firebaseUser.getUid());
         }
     }
     public void logout(){
