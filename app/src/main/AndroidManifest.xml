@@ -12,9 +12,19 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".InicioActivity"
-            android:label="@string/title_activity_inicio"
+            android:name=".ListaMateriaActivity"
+            android:label="@string/title_activity_lista_materia"
             android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity
+            android:name=".InicioActivity2"
+            android:label="@string/title_activity_inicio2"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity android:name=".LoginActivity" />
         <activity
             android:name=".ui.login.LoginActivity"

@@ -1,17 +1,20 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#0A5517"
-    android:gravity="center"
-    android:orientation="vertical">
+    tools:context=".ListaMateriaActivity">
 
-    <TextView
-        android:id="@+id/textViewNome"
+    <include layout="@layout/content_lista_materia" />
+
+    <ImageButton
+        android:id="@+id/imageButton_voltarMainActivity"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/nome"
-        android:textAppearance="?android:attr/textAppearanceMedium" />
+        android:onClick="voltar"
+        android:text="@string/imageButton_Voltar" />
     <Button
         android:id="@+id/buttonApagar"
         android:layout_width="wrap_content"
@@ -23,8 +26,5 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/Editar" />
-    <ListView
-        android:id="@+id/listV_dados"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
-</LinearLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

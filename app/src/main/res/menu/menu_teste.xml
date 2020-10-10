@@ -3,11 +3,6 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <item
-        android:id="@+id/opcao"
-        android:title="opcao"
-        app:showAsAction="never" />
-
-    <item
         android:id="@+id/action_materias"
         android:orderInCategory="101"
         android:title="@string/action_materias"
@@ -17,8 +12,8 @@
                 android:id="@+id/cadastrar_materia"
                 android:title="@string/cadastro_materia" />
             <item
-                android:id="@+id/cadastrar_nota"
-                android:title="@string/CadastrarNota" />
+                android:id="@+id/consulta_materia"
+                android:title="@string/consultar_materia" />
         </menu>
     </item>
 
@@ -29,11 +24,11 @@
         app:showAsAction="never">
         <menu>
             <item
-                android:id="@+id/consulta_materia"
-                android:title="@string/consultar_boletim" />
+                android:id="@+id/cadastrar_nota"
+                android:title="@string/cadastro_nota" />
             <item
                 android:id="@+id/consulta_boletim"
-                android:title="@string/consultar_materia" />
+                android:title= "@string/consultar_boletim" />
         </menu>
     </item>
     <item

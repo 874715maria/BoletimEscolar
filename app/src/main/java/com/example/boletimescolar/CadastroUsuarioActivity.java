@@ -2,9 +2,6 @@ package com.example.boletimescolar;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuInflater;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -63,7 +60,7 @@ public class CadastroUsuarioActivity extends AppCompatActivity {
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if(task.isSuccessful()){
                             alert("Usuário Cadastrado com Sucesso");
-                            Intent i = new Intent(CadastroUsuarioActivity.this, InicioActivity.class);
+                            Intent i = new Intent(CadastroUsuarioActivity.this, InicioActivity2.class);
                             finish();
                         }else {
                             alert("Erro de Cadastro");
@@ -80,29 +77,10 @@ public class CadastroUsuarioActivity extends AppCompatActivity {
         firebaseDatabase = FirebaseDatabase.getInstance();
         databaseReference = firebaseDatabase.getReference();
     }
-    public void salvar(){
-        Aluno aluno = new Aluno();
-        aluno.setId(UUID.randomUUID().toString());
-        aluno.setEmail(inputText_Email.getText().toString());
-        aluno.setPassword(inputText_Password.getText().toString());
-
-        databaseReference.child("Aluno").child(aluno.getId()) .setValue(aluno);
-        limparCampos();
-    }
-    public void limparCampos(){
-        inputText_Email.setText("");
-        inputText_Password.setText("");
-    }
 
     //Metodo para voltar para a tela inicial do app (não logado/tela de cadastro e login)
     public void voltarMainActivity(View view) {
         finish();
-    }
-
-    //Metodo para enviar os dados do cadastro para o BD e ir para a tela início do app (não logado/tela de cadastro e login)
-    public void salvarCadastro() {
-        Intent intent = new Intent(this, MainActivity.class);
-        startActivity(intent);
     }
 
     @Override

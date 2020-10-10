@@ -23,26 +23,18 @@
         android:id="@+id/editText_nomeMateria"
         android:layout_width="match_parent"
         android:layout_height="40dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="64dp"
-        android:layout_marginEnd="16dp"
+        android:layout_marginTop="16dp"
         android:background="#ffffff"
-        android:autofillHints="@string/nomemateria"
-        android:ems="10"
-        android:hint="@string/nomemateria"
-        android:inputType="textPersonName"
-        android:textColorHint="#9E000000"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.487"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView_preenchaCampo" />
+        android:importantForAutofill="no"
+        android:selectAllOnFocus="true"
+        tools:ignore="MissingConstraints" />
 
     <Button
         android:id="@+id/buttonCancelar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:onClick="voltarMainActivity"
         android:text="@string/cancelar"
+        android:onClick="voltarMainActivity"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.229"
@@ -54,7 +46,6 @@
         android:id="@+id/buttonSalvar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:onClick="salvarMateria"
         android:text="@string/salvar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -62,5 +53,9 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/editText_nomeMateria"
         tools:layout_editor_absoluteY="198dp" />
+    <ListView
+        android:id="@+id/listV_dados"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

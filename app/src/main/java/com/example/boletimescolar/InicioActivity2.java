@@ -5,46 +5,52 @@ import android.os.Bundle;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
+import com.google.firebase.FirebaseApp;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.TextView;
+import android.widget.ArrayAdapter;
+import android.widget.Button;
+import android.widget.ListView;
 import android.widget.Toast;
 
-public class InicioActivity extends AppCompatActivity {
+import java.util.ArrayList;
+import java.util.List;
+
+public class InicioActivity2 extends AppCompatActivity {
 
     private FirebaseAuth firebaseAuth;
     private FirebaseUser firebaseUser;
 
-    //FirebaseDatabase firebaseDatabase;
-    //DatabaseReference databaseReference;
 
-    // private ListView listView;
-    // private StorageReference storageReference;
-
-    //private List<Materia> materialist;
-    // private MateriaAdapter materiaAdapter;
-
-    //private Materia materia;
-
-    private TextView bemvindo;
-
-    //private Materia materiaEscolhida;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_inicio);
-        // bancoDeDados();
-        // registerForContextMenu(listView);
-        bemvindo = (TextView) findViewById(R.id.textView_BemVindo);
-    }
+        setContentView(R.layout.activity_inicio2);
+        Toolbar toolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
 
+        FloatingActionButton fab = findViewById(R.id.fab);
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+                        .setAction("Action", null).show();
+            }
+        });
+    }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
 
@@ -59,16 +65,15 @@ public class InicioActivity extends AppCompatActivity {
                 Toast.makeText(this, "Item Materia selecionado", Toast.LENGTH_SHORT).show();
                 return true;
             case R.id.cadastrar_materia:
-                Toast.makeText(this, "Item Cadastrar materia selecionado", Toast.LENGTH_SHORT).show();
-                return true;
-            case R.id.cadastrar_nota:
-                Toast.makeText(this, "Item Cadastrar Nota Selecionado selecionado", Toast.LENGTH_SHORT).show();
-                return true;
-            case R.id.action_notas:
-                Toast.makeText(this, "Item Nota selecionado", Toast.LENGTH_SHORT).show();
+                abreCadastrarMateria();
                 return true;
             case R.id.consulta_materia:
-                Toast.makeText(this, "Item Consultar Materia selecionado", Toast.LENGTH_SHORT).show();
+                abreConsultaMateria();
+                return true;
+            case R.id.action_notas:
+                return true;
+            case R.id.cadastrar_nota:
+                //abreCadastrarNota();
                 return true;
             case R.id.consulta_boletim:
                 Toast.makeText(this, "Item Consultar Boletim selecionado", Toast.LENGTH_SHORT).show();
@@ -83,13 +88,16 @@ public class InicioActivity extends AppCompatActivity {
                 return super.onOptionsItemSelected(item);
         }
     }
-
-    /*public void abreCadastrarMateria(View view) {
+     public void abreCadastrarMateria() {
         Intent intent = new Intent(this, MateriaActivity.class);
         startActivity(intent);
     }
+    public void abreConsultaMateria(){
+        Intent intent = new Intent(this, ListaMateriaActivity.class);
+        startActivity(intent);
+    }
 
-    public void abreCadastrarNota(View view) {
+    /*public void abreCadastrarNota() {
         Intent intent = new Intent(this, NotaActivity.class);
         startActivity(intent);
     }*/
