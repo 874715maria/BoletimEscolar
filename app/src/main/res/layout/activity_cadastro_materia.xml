@@ -16,11 +16,11 @@
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/editText_nomeMateria"
+        app:layout_constraintTop_toBottomOf="@id/editTextInput_nomeMateria"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/editText_nomeMateria"
+        android:id="@+id/editTextInput_nomeMateria"
         android:layout_width="match_parent"
         android:layout_height="40dp"
         android:layout_marginTop="16dp"
@@ -30,7 +30,7 @@
         tools:ignore="MissingConstraints" />
 
     <Button
-        android:id="@+id/buttonCancelar"
+        android:id="@+id/button_Cancelar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/cancelar"
@@ -39,11 +39,11 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.229"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/editText_nomeMateria"
+        app:layout_constraintTop_toBottomOf="@id/editTextInput_nomeMateria"
         tools:layout_editor_absoluteY="198dp" />
 
     <Button
-        android:id="@+id/buttonSalvar"
+        android:id="@+id/button_Salvar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/salvar"
@@ -51,7 +51,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.727"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/editText_nomeMateria"
+        app:layout_constraintTop_toBottomOf="@id/editTextInput_nomeMateria"
         tools:layout_editor_absoluteY="198dp" />
     <ListView
         android:id="@+id/listV_dados"

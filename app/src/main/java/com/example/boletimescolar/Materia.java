@@ -4,6 +4,7 @@ public class Materia extends _Default{
 
     private String id;
     private String nome;
+    private String unidade;
 
     public Materia(){
     }
@@ -22,6 +23,14 @@ public class Materia extends _Default{
 
     public void setNome(String nome) {
         this.nome = nome;
+    }
+
+    public String getUnidade() {
+        return unidade;
+    }
+
+    public void setUnidade(String unidade) {
+        this.unidade = unidade;
     }
 
     @Override

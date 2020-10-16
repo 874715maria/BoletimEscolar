@@ -2,7 +2,6 @@ package com.example.boletimescolar;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -22,8 +21,8 @@ public class UsuarioActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_usuario);
 
-        buttonSalvar = (Button) findViewById(R.id.buttonSalvar);
-        buttonCancelar = (Button) findViewById(R.id.buttonCancelar);
+        buttonSalvar = (Button) findViewById(R.id.button_Salvar);
+        buttonCancelar = (Button) findViewById(R.id.button_Cancelar);
 
         editTextNome = (EditText) findViewById(R.id.editTextNome);
         editTextIdade = (EditText) findViewById(R.id.editTextIdade);

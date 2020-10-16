@@ -73,7 +73,7 @@
         android:layout_marginTop="32dp">
 
         <Button
-            android:id="@+id/buttonSalvar"
+            android:id="@+id/button_Salvar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="32dp"
@@ -81,7 +81,7 @@
             android:text="@string/salvar" />
 
         <Button
-            android:id="@+id/buttonCancelar"
+            android:id="@+id/button_Cancelar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="32dp"

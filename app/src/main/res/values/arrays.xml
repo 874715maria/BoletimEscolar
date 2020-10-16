@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="unidade">
+        <item>Unidade</item>
+        <item>1ª</item>
+        <item>2ª</item>
+    </string-array>
+</resources>

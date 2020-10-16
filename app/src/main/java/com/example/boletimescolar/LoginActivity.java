@@ -35,26 +35,37 @@ public class LoginActivity extends AppCompatActivity {
             public void onClick(View v) {
                 String email = inputText_email.getText().toString().trim();
                 String password = inputText_password.getText().toString().trim();
-                login(email, password);
+                if (email.isEmpty() || password.isEmpty()) {
+                    alert("Campo(s) vazio(s). Favor preencher!");
+                } else {
+                    login(email, password);
+                }
             }
         });
+
         imageButton_voltarMainActivity = (ImageButton) findViewById(R.id.button_voltarMainActivityLogin);
+        imageButton_voltarMainActivity.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                voltarMainActivity(view);
+            }
+        });
 
         inputText_email = (EditText) findViewById(R.id.inputText_email);
         inputText_password = (EditText) findViewById(R.id.inputText_password);
     }
 
     private void login(String email, String password) {
-        auth.signInWithEmailAndPassword(email,password)
+        auth.signInWithEmailAndPassword(email, password)
                 .addOnCompleteListener(LoginActivity.this, new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
-                            if (task.isSuccessful()){
-                                Intent intent = new Intent(LoginActivity.this, InicioActivity2.class);
-                                startActivity(intent);
-                            }else{
-                                alert("e-mail ou senha errados");
-                            }
+                        if (task.isSuccessful()) {
+                            Intent intent = new Intent(LoginActivity.this, InicioActivity2.class);
+                            startActivity(intent);
+                        } else {
+                            alert("Falha no login! E-mail e/ou senha errado");
+                        }
                     }
                 });
     }

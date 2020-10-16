@@ -10,87 +10,81 @@
         android:id="@+id/textView_PreenchaCampos"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
         android:text="@string/textView_PreenchaCampos"
         android:textColor="#FFFFFF"
         android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.19"
         tools:ignore="MissingConstraints" />
 
-    <Spinner
-        android:id="@+id/spinner_materia"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:spinnerMode="dropdown"
+    <EditText
+        android:id="@+id/editTextInput_nomeMateria"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="16dp"
+        android:background="#ffffff"
+        android:hint="@string/nomemateria"
+        android:importantForAutofill="no"
+        android:selectAllOnFocus="true"
         app:layout_constraintEnd_toStartOf="parent"
         app:layout_constraintStart_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/textView_PreenchaCampos" />
-
-    <Spinner
-        android:id="@+id/spinner_periodo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:spinnerMode="dropdown"
-        app:layout_constraintEnd_toStartOf="parent"
-        app:layout_constraintStart_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/spinner_materia" />
+        app:layout_constraintTop_toBottomOf="@id/textView_PreenchaCampos"
+        tools:ignore="MissingConstraints" />
 
     <Spinner
         android:id="@+id/spinner_unidade"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="32dp"
+        android:entries="@array/unidade"
+        android:paddingTop="16dp"
         android:spinnerMode="dropdown"
         app:layout_constraintEnd_toStartOf="parent"
         app:layout_constraintStart_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/spinner_periodo" />
+        app:layout_constraintTop_toBottomOf="@id/editTextInput_nomeMateria" />
 
     <EditText
         android:id="@+id/editTextInput_nota"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:layout_marginBottom="8dp"
+        android:layout_marginTop="32dp"
         android:autofillHints="@string/CadastrarNota"
         android:hint="@string/Nota"
-        android:inputType="number"
+        android:inputType="numberDecimal"
         android:textColorHint="#2AFFFFFF"
-        app:layout_constraintBottom_toTopOf="@+id/buttonCancelar"
         app:layout_constraintEnd_toStartOf="parent"
         app:layout_constraintStart_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/spinner_unidade"
-        app:layout_constraintVertical_bias="0.100000024" />
+        app:layout_constraintTop_toBottomOf="@id/spinner_unidade" />
 
     <Button
-        android:id="@+id/buttonCancelar"
+        android:id="@+id/button_Cancelar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="301dp"
-        android:onClick="voltarMainActivity"
+        android:onClick="botaoCancelarNota"
         android:text="@string/cancelar"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@id/buttonSalvar"
+        app:layout_constraintEnd_toStartOf="@id/button_Salvar"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView_PreenchaCampos"
         app:layout_constraintVertical_bias="0.0"
         tools:ignore="MissingConstraints" />
 
     <Button
-        android:id="@+id/buttonSalvar"
+        android:id="@+id/button_Salvar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="69dp"
         android:layout_marginTop="301dp"
-        android:onClick="salvarNota"
+        android:onClick="salvar"
         android:text="@string/salvar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/buttonCancelar"
+        app:layout_constraintStart_toEndOf="@+id/button_Cancelar"
         app:layout_constraintTop_toBottomOf="@+id/textView_PreenchaCampos"
         app:layout_constraintVertical_bias="0.0"
         tools:ignore="MissingConstraints" />

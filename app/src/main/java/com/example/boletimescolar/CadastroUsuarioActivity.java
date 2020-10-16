@@ -19,18 +19,14 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
-import java.util.UUID;
-
 public class CadastroUsuarioActivity extends AppCompatActivity {
-
-    private ImageButton imageButton_voltarMainActivity;
-    private Button button_salvarCadastro;
-    private EditText inputText_Email, inputText_Password;
-
-    private FirebaseAuth auth;
 
     FirebaseDatabase firebaseDatabase;
     DatabaseReference databaseReference;
+    private ImageButton imageButton_voltarMainActivity;
+    private Button button_salvarCadastro;
+    private EditText inputText_Email, inputText_Password;
+    private FirebaseAuth auth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,26 +49,28 @@ public class CadastroUsuarioActivity extends AppCompatActivity {
 
 
     }
+
     private void criarUser(String email, String password) {
         auth.createUserWithEmailAndPassword(email, password)
                 .addOnCompleteListener(CadastroUsuarioActivity.this, new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
-                        if(task.isSuccessful()){
+                        if (task.isSuccessful()) {
                             alert("Usuário Cadastrado com Sucesso");
                             Intent i = new Intent(CadastroUsuarioActivity.this, InicioActivity2.class);
                             finish();
-                        }else {
+                        } else {
                             alert("Erro de Cadastro");
                         }
                     }
                 });
     }
 
-    private void alert (String msg){
-        Toast.makeText(CadastroUsuarioActivity.this, msg,Toast.LENGTH_SHORT).show();
+    private void alert(String msg) {
+        Toast.makeText(CadastroUsuarioActivity.this, msg, Toast.LENGTH_SHORT).show();
     }
-    public void inicializarFirebase(){
+
+    public void inicializarFirebase() {
         FirebaseApp.initializeApp(CadastroUsuarioActivity.this);
         firebaseDatabase = FirebaseDatabase.getInstance();
         databaseReference = firebaseDatabase.getReference();
