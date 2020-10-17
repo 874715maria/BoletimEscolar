@@ -58,7 +58,10 @@
     <string name="textViewButton_Salvar2">Salvar 2</string>
     <string name="TesteActivity">TESTE</string>
     <string name="button_TesteLogin">Teste</string>
-    <string name="nomemateria">Ex.: Português... </string>
+    <string name="nomemateria">Nome da matéria. Ex.: Português... </string>
+    <string name="unidade">Unidade. Ex.: 1ª </string>
+    <string name="periodo">Período. Ex.: 1º </string>
+    <string name="nota">Nota. Ex.: 9.0 </string>
     <string name="title_activity_main2">MainActivity</string>
     <string name="title_activity_menu_teste">MainActivity</string>
     <string name="title_home">Home</string>

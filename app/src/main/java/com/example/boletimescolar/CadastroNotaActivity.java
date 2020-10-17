@@ -1,6 +1,5 @@
 package com.example.boletimescolar;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -21,8 +20,7 @@ public class CadastroNotaActivity extends AppCompatActivity {
     FirebaseDatabase firebaseDatabase;
     DatabaseReference databaseReference;
     private TextView textView_cadastroNota;
-    private EditText editText_nomeMateria, editText_nota;
-    private Spinner spinner_unidade;
+    private EditText editText_nomeMateria, editText_periodo, editText_unidade, editText_nota;
     private Button button_cancelar, button_salvar;
 
     @Override
@@ -33,8 +31,10 @@ public class CadastroNotaActivity extends AppCompatActivity {
 
         textView_cadastroNota = findViewById(R.id.cadastrar_nota);
         editText_nomeMateria = findViewById(R.id.editTextInput_nomeMateria);
+        editText_periodo = findViewById(R.id.editTextInput_periodo);
+        editText_unidade = findViewById(R.id.editTextInput_unidade);
         editText_nota = findViewById(R.id.editTextInput_nota);
-        spinner_unidade = findViewById(R.id.spinner_unidade);
+
         button_cancelar = findViewById(R.id.button_Cancelar);
         button_cancelar.setOnClickListener(new View.OnClickListener() {
             @Override
