@@ -4,8 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#0A5517"
-    tools:context=".InicioActivity2">
+    android:background="#0A5517">
 
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
@@ -21,7 +20,7 @@
 
     </com.google.android.material.appbar.AppBarLayout>
 
-    <include layout="@layout/content_inicio2" />
+
     <TextView
         android:id="@+id/textView_BemVindo"
         android:layout_width="wrap_content"
@@ -40,5 +39,10 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.25"
         tools:visibility="visible" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/firestore_list"
+        android:layout_width="411dp"
+        android:layout_height="267dp" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

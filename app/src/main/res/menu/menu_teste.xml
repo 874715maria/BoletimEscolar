@@ -16,21 +16,6 @@
                 android:title="@string/consultar_materia" />
         </menu>
     </item>
-
-    <item
-        android:id="@+id/action_notas"
-        android:orderInCategory="102"
-        android:title="@string/action_notas"
-        app:showAsAction="never">
-        <menu>
-            <item
-                android:id="@+id/cadastrar_nota"
-                android:title="@string/cadastro_nota" />
-            <item
-                android:id="@+id/consulta_boletim"
-                android:title= "@string/consultar_boletim" />
-        </menu>
-    </item>
     <item
         android:id="@+id/action_contaUsuario"
         android:orderInCategory="103"

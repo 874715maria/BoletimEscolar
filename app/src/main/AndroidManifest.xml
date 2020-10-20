@@ -11,7 +11,11 @@
         android:roundIcon="@mipmap/ic_boletim_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".CadastroNotaActivity"></activity>
+        <activity
+            android:name=".ListaMaterias"
+            android:label="@string/title_activity_lista_materias"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity android:name=".CadastroNotaActivity" />
         <activity
             android:name=".ListaMateriaActivity"
             android:label="@string/title_activity_lista_materia"
@@ -30,11 +34,10 @@
         <activity
             android:name=".ui.login.LoginActivity"
             android:label="@string/title_activity_login" />
-        <activity android:name=".CadastroUsuarioActivity" />
-<!--        <activity-->
-<!--            android:name=".Nota"-->
-<!--            android:label="@string/title_activity_nota"-->
-<!--            android:theme="@style/AppTheme.NoActionBar" />-->
+        <activity android:name=".CadastroUsuarioActivity" /> <!-- <activity -->
+        <!-- android:name=".Nota" -->
+        <!-- android:label="@string/title_activity_nota" -->
+        <!-- android:theme="@style/AppTheme.NoActionBar" /> -->
         <activity
             android:name=".MateriaActivity"
             android:label="@string/title_activity_materia"

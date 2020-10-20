@@ -3,7 +3,8 @@
     <string name="CadastrarMateria">Cadastrar Matéria</string>
     <string name="CadastrarNota">Cadastrar Nota</string>
     <string name="nome">Nome</string>
-    <string name="idade">Idade</string>
+    <string name="atualizar">Atualizar</string>
+    <string name="deletar">Deletar</string>
     <string name="email">E-mail</string>
     <string name="nomeEscola">Nome Escola</string>
     <string name="salvar">Salvar</string>
@@ -60,8 +61,11 @@
     <string name="button_TesteLogin">Teste</string>
     <string name="nomemateria">Nome da matéria. Ex.: Português... </string>
     <string name="unidade">Unidade. Ex.: 1ª </string>
+    <string name="unidade2">Unidade </string>
     <string name="periodo">Período. Ex.: 1º </string>
+    <string name="periodo2">Período </string>
     <string name="nota">Nota. Ex.: 9.0 </string>
+    <string name="nota2">Nota </string>
     <string name="title_activity_main2">MainActivity</string>
     <string name="title_activity_menu_teste">MainActivity</string>
     <string name="title_home">Home</string>
@@ -89,5 +93,6 @@
     <string name="title_activity_inicio2">InicioActivity2</string>
     <string name="title_activity_materia2">MateriaActivity2</string>
     <string name="title_activity_lista_materia">ListaMateriaActivity</string>
+    <string name="title_activity_lista_materias">ListaMaterias</string>
 
 </resources>

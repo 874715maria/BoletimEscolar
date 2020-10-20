@@ -4,58 +4,122 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#0A5517">
+    android:background="#0A5517"
+    android:orientation="vertical">
 
     <TextView
-        android:id="@+id/textView_preenchaCampo"
+        android:id="@+id/textView_PreenchaCampos"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="64dp"
-        android:text="@string/textView_preenchaCampo"
+        android:layout_marginTop="60dp"
+        android:text="@string/textView_PreenchaCampos"
         android:textColor="#FFFFFF"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/editTextInput_nomeMateria"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
 
     <EditText
         android:id="@+id/editTextInput_nomeMateria"
         android:layout_width="match_parent"
         android:layout_height="40dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="16dp"
         android:background="#ffffff"
+        android:hint="@string/nomemateria"
+        android:inputType="text"
         android:importantForAutofill="no"
         android:selectAllOnFocus="true"
+        app:layout_constraintEnd_toStartOf="parent"
+        app:layout_constraintStart_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textView_PreenchaCampos"
         tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/editTextInput_periodo"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="16dp"
+        android:background="#ffffff"
+        android:hint="@string/periodo"
+        android:inputType="number"
+        android:importantForAutofill="no"
+        android:selectAllOnFocus="true"
+        app:layout_constraintEnd_toStartOf="parent"
+        app:layout_constraintStart_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/editTextInput_nomeMateria"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/editTextInput_unidade"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="16dp"
+        android:background="#ffffff"
+        android:inputType="number"
+        android:hint="@string/unidade"
+        android:importantForAutofill="no"
+        android:selectAllOnFocus="true"
+        app:layout_constraintEnd_toStartOf="parent"
+        app:layout_constraintStart_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/editTextInput_periodo"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/editTextInput_nota"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="16dp"
+        android:background="#ffffff"
+        android:inputType="numberDecimal"
+        android:hint="@string/nota"
+        android:importantForAutofill="no"
+        android:selectAllOnFocus="true"
+        app:layout_constraintEnd_toStartOf="parent"
+        app:layout_constraintStart_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/editTextInput_unidade" />
 
     <Button
         android:id="@+id/button_Cancelar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="301dp"
         android:text="@string/cancelar"
-        android:onClick="voltarMainActivity"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.229"
+        app:layout_constraintEnd_toStartOf="@id/button_Salvar"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/editTextInput_nomeMateria"
-        tools:layout_editor_absoluteY="198dp" />
+        app:layout_constraintTop_toBottomOf="@+id/textView_PreenchaCampos"
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="MissingConstraints" />
 
     <Button
         android:id="@+id/button_Salvar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="69dp"
+        android:layout_marginTop="301dp"
         android:text="@string/salvar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.727"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/editTextInput_nomeMateria"
-        tools:layout_editor_absoluteY="198dp" />
+        app:layout_constraintStart_toEndOf="@+id/button_Cancelar"
+        app:layout_constraintTop_toBottomOf="@+id/textView_PreenchaCampos"
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="MissingConstraints" />
+
+
     <ListView
         android:id="@+id/listV_dados"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+        android:layout_width="409dp"
+        android:layout_height="160dp"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="442dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

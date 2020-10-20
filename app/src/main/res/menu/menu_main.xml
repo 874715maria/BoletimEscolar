@@ -22,20 +22,6 @@
     </item>
 
     <item
-        android:id="@+id/action_notas"
-        android:orderInCategory="102"
-        android:title="@string/action_notas"
-        app:showAsAction="never">
-        <menu>
-            <item
-                android:id="@+id/consulta_materia"
-                android:title="@string/consultar_boletim" />
-            <item
-                android:id="@+id/consulta_boletim"
-                android:title="@string/consultar_materia" />
-        </menu>
-    </item>
-    <item
         android:id="@+id/action_contaUsuario"
         android:orderInCategory="103"
         android:title="@string/action_conta"

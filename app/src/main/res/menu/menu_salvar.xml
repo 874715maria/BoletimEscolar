@@ -2,8 +2,13 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <item android:id="@+id/menu_novo"
-        android:title="novo"
-        android:icon="@drawable/ic_novo"
+    <item android:id="@+id/menu_atualizar"
+        android:title="@string/atualizar"
+        android:icon="@drawable/ic_atualizar"
         app:showAsAction="always"/>
+    <item android:id="@+id/menu_deletar"
+        android:title="@string/deletar"
+        android:icon="@drawable/ic_atualizar"
+        app:showAsAction="always"/>
+
 </menu>
