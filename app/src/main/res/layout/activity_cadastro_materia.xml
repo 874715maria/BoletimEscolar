@@ -11,7 +11,7 @@
         android:id="@+id/textView_PreenchaCampos"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="16dp"
         android:text="@string/textView_PreenchaCampos"
         android:textColor="#FFFFFF"
         android:textSize="24sp"
@@ -29,8 +29,8 @@
         android:layout_marginEnd="16dp"
         android:background="#ffffff"
         android:hint="@string/nomemateria"
-        android:inputType="text"
         android:importantForAutofill="no"
+        android:inputType="text"
         android:selectAllOnFocus="true"
         app:layout_constraintEnd_toStartOf="parent"
         app:layout_constraintStart_toEndOf="parent"
@@ -46,8 +46,8 @@
         android:layout_marginEnd="16dp"
         android:background="#ffffff"
         android:hint="@string/periodo"
-        android:inputType="number"
         android:importantForAutofill="no"
+        android:inputType="number"
         android:selectAllOnFocus="true"
         app:layout_constraintEnd_toStartOf="parent"
         app:layout_constraintStart_toEndOf="parent"
@@ -62,9 +62,9 @@
         android:layout_marginTop="32dp"
         android:layout_marginEnd="16dp"
         android:background="#ffffff"
-        android:inputType="number"
         android:hint="@string/unidade"
         android:importantForAutofill="no"
+        android:inputType="number"
         android:selectAllOnFocus="true"
         app:layout_constraintEnd_toStartOf="parent"
         app:layout_constraintStart_toEndOf="parent"
@@ -79,9 +79,9 @@
         android:layout_marginTop="32dp"
         android:layout_marginEnd="16dp"
         android:background="#ffffff"
-        android:inputType="numberDecimal"
         android:hint="@string/nota"
         android:importantForAutofill="no"
+        android:inputType="numberDecimal"
         android:selectAllOnFocus="true"
         app:layout_constraintEnd_toStartOf="parent"
         app:layout_constraintStart_toEndOf="parent"
@@ -114,12 +114,13 @@
         app:layout_constraintVertical_bias="0.0"
         tools:ignore="MissingConstraints" />
 
-
     <ListView
         android:id="@+id/listV_dados"
-        android:layout_width="409dp"
+        android:layout_width="match_parent"
         android:layout_height="160dp"
-        tools:layout_editor_absoluteX="1dp"
-        tools:layout_editor_absoluteY="442dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_Cancelar" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
